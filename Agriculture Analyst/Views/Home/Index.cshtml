@@ -1,0 +1,167 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/login/login.css" />
+</head>
+<body>
+    <div class="container" id="container">
+        <!-- Sign Up Form -->
+        <div class="form-container sign-up-container">
+            <form method="post" asp-action="SignUp" asp-controller="Home" id="signupForm">
+                @Html.AntiForgeryToken()
+                
+                @if (ViewData["signupError"] != null)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @ViewData["signupError"]
+                    </div>
+                }
+
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success" role="alert">
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
+
+                <h1>Create Account</h1>
+
+                <div class="form-group">
+                    <input type="text" name="Username" placeholder="User Name" required>
+                    @Html.ValidationMessage("Username", new { @class = "error-message" })
+                </div>
+
+                <div class="form-group">
+                    <input type="email" name="Email" placeholder="Email" required>
+                    @Html.ValidationMessage("Email", new { @class = "error-message" })
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="Name" placeholder="Full Name" required>
+                    @Html.ValidationMessage("Name", new { @class = "error-message" })
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="tel" name="Phone" placeholder="Phone Number">
+                        @Html.ValidationMessage("Phone", new { @class = "error-message" })
+                    </div>
+                    <div class="form-group">
+                        <select name="Gender">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="date" name="DateOfBirth" placeholder="Date of Birth">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="Address" placeholder="Address (Optional)">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="Password" placeholder="Password (Min 6 characters)" required>
+                    @Html.ValidationMessage("Password", new { @class = "error-message" })
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="ConfirmPassword" placeholder="Confirm Password" required>
+                    @Html.ValidationMessage("ConfirmPassword", new { @class = "error-message" })
+                </div>
+
+                <button type="submit" id="btnSignUp">Sign Up</button>
+                <p class="form-note">By signing up, you agree to our Terms & Conditions</p>
+            </form>
+        </div>
+
+        <!-- Sign In Form -->
+        <div class="form-container sign-in-container">
+            <form method="post" asp-action="SignIn" asp-controller="Home" id="signinForm">
+                @Html.AntiForgeryToken()
+                
+                @if (ViewData["signinError"] != null)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @ViewData["signinError"]
+                    </div>
+                }
+
+                <button type="button" id="btnHome" onclick="location.href='/'">Home</button>
+
+                <h1>Sign In</h1>
+
+                <div class="form-group">
+                    <input type="text" name="Username" placeholder="User Name" required>
+                    @Html.ValidationMessage("Username", new { @class = "error-message" })
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="Password" placeholder="Password" required>
+                    @Html.ValidationMessage("Password", new { @class = "error-message" })
+                </div>
+
+                <button type="submit" id="btnSignIn">Sign In</button>
+
+                <div class="divider">OR</div>
+
+                <p class="form-note" style="margin-top: 8px; text-align: center;">
+                    <a href="/Home/ForgotPassword" style="color: #e74c3c; font-weight: bold;">Forgot your password?</a>
+                </p>
+            </form>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button type="button" class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start your journey with us</p>
+                    <button type="button" class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const overlaySignUp = document.getElementById('signUp');
+        const overlaySignIn = document.getElementById('signIn');
+
+        overlaySignUp.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        overlaySignIn.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+
+        // Show Sign In if signupError or success message
+        @if (ViewData["showSignIn"] != null || TempData["SuccessMessage"] != null)
+        {
+            <text>
+        document.addEventListener('DOMContentLoaded', () => {
+            container.classList.remove("right-panel-active");
+        });
+            </text>
+        }
+    </script>
+</body>
+</html>

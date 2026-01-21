@@ -1,0 +1,23 @@
+﻿@model Agriculture_Analyst.Models.Plant
+
+<h2>🌿 @Model.PlantName</h2>
+
+<p><b>Loại:</b> @Model.PlantType</p>
+<p><b>Ngày bắt đầu:</b> @Model.StartDate?.ToString("dd/MM/yyyy")</p>
+<p><b>Diện tích:</b> @Model.Area</p>
+<p><b>Trạng thái:</b> @Model.Status</p>
+
+<hr />
+
+<a asp-action="Edit" asp-route-id="@Model.PlantId"
+   class="btn btn-warning">✏️ Chỉnh sửa</a>
+
+<a asp-controller="Diary"
+   asp-action="Index"
+   asp-route-plantId="@Model.PlantId"
+   class="btn btn-info">📖 Nhật ký</a>
+
+<a asp-controller="Diary"
+   asp-action="Create"
+   asp-route-plantId="@Model.PlantId"
+   class="btn btn-success">➕ Ghi nhật ký</a>

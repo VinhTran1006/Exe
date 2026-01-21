@@ -1,0 +1,59 @@
+﻿@model Agriculture_Analyst.Models.InventoryTransaction
+
+@{
+    ViewData["Title"] = "Nhập kho";
+}
+
+<h2 class="mb-4">📥 Nhập kho</h2>
+
+<form asp-action="Create" method="post" class="card p-4 shadow-sm">
+
+    @Html.AntiForgeryToken()
+
+    <select asp-for="InvId"
+            asp-items="ViewBag.InventoryList"
+            class="form-select">
+        <option value="">-- Chọn kho --</option>
+    </select>
+
+    <select asp-for="ItemId"
+            asp-items="ViewBag.ItemList"
+            class="form-select">
+        <option value="">-- Chọn vật tư --</option>
+    </select>
+
+
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <label>Số lượng</label>
+            <input asp-for="SoLuong" class="form-control" />
+            <span asp-validation-for="SoLuong" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <label>Đơn giá</label>
+            <input asp-for="DonGia" class="form-control" />
+            <span asp-validation-for="DonGia" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <label>Lãi suất (%)</label>
+            <input asp-for="LaiSuat" class="form-control" />
+        </div>
+    </div>
+
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-success">
+            💾 Lưu
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            ↩ Quay lại
+        </a>
+    </div>
+
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

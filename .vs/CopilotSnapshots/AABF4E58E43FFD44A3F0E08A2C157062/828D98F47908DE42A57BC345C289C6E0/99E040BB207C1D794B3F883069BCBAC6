@@ -1,0 +1,78 @@
+﻿using System.Diagnostics;
+using Agriculture_Analyst.Models;
+using Agriculture_Analyst.Models.DTOs;
+using Agriculture_Analyst.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Agriculture_Analyst.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+        private readonly IAuthService _authService;
+
+        public HomeController(ILogger<HomeController> logger, IAuthService authService)
+        {
+            _logger = logger;
+            _authService = authService;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("api/auth/signup")]
+        public async Task<IActionResult> SignUp([FromBody] SignUpRequestDto request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new { success = false, message = "Invalid input data." });
+            }
+
+            var result = await _authService.SignUpAsync(request);
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route("api/auth/signin")]
+        public async Task<IActionResult> SignIn([FromBody] SignInRequestDto request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new { success = false, message = "Invalid input data." });
+            }
+
+            var result = await _authService.SignInAsync(request);
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+
+            // Set session or cookie here (optional, for authentication persistence)
+            // HttpContext.Session.SetString("UserId", result.User.UserId.ToString());
+            // HttpContext.Session.SetString("Username", result.User.Username);
+
+            return Ok(result);
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}

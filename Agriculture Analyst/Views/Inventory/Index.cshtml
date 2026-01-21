@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Agriculture_Analyst.Models.InventoryTransaction>
+
+@{
+    ViewData["Title"] = "Nhập kho";
+}
+
+<h2 class="mb-3">📦 Lịch sử nhập kho</h2>
+
+<a asp-action="Create" class="btn btn-success mb-3">
+    ➕ Nhập kho
+</a>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-success">
+        <tr>
+            <th>Kho</th>
+            <th>Vật tư</th>
+            <th>Số lượng</th>
+            <th>Đơn giá</th>
+            <th>Thành tiền</th>
+            <th>Lãi suất</th>
+            <th>Ngày</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Inventory.InvName</td>
+                <td>@item.Item.ItemName</td>
+                <td>@item.SoLuong</td>
+                <td>@item.DonGia.ToString("N0")</td>
+                <td class="fw-bold text-success">
+                    @item.ThanhTien.ToString("N0")
+                </td>
+                <td>@item.LaiSuat %</td>
+                <td>@item.?NgayGiaoDich.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>

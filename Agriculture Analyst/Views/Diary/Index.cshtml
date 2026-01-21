@@ -1,0 +1,105 @@
+﻿@model Agriculture_Analyst.Models.ViewModel.DiaryIndexViewModel
+@using Agriculture_Analyst.Models
+
+<link rel="stylesheet" href="~/css/style/diary.css" asp-append-version="true" />
+
+
+<h2 class="mb-3">📘 Nhật ký cây trồng</h2>
+
+<div class="diary-layout">
+
+    <!-- ================= LEFT: THÔNG TIN CÂY ================= -->
+    <div class="plant-info">
+        <h4>@Model.Plant.PlantName</h4>
+        <p><strong>Loại:</strong> @Model.Plant.PlantType</p>
+        <p><strong>Diện tích:</strong> @Model.Plant.Area m²</p>
+        <p><strong>Bắt đầu:</strong> @Model.Plant.StartDate?.ToString("dd/MM/yyyy")</p>
+        <p><strong>Trạng thái:</strong> @Model.Plant.Status</p>
+
+        <!-- CHỌN NGÀY -->
+        <form method="get" asp-action="Index">
+            <input type="hidden" name="plantId" value="@Model.Plant.PlantId" />
+            <input type="date"
+                   name="date"
+                   value="@Model.SelectedDate.ToString("yyyy-MM-dd")"
+                   class="form-control mt-2"
+                   onchange="this.form.submit()" />
+        </form>
+    </div>
+
+    <!-- ================= RIGHT: TASK + DIARY ================= -->
+    <div class="task-section">
+
+        <!-- ===== TASK ===== -->
+        <div class="task-header">
+            <h5>📋 Nhiệm vụ trong ngày</h5>
+            <a asp-action="CreateTask"
+               asp-route-plantId="@Model.Plant.PlantId"
+               class="btn btn-primary btn-sm">
+                ➕ Thêm nhiệm vụ
+            </a>
+        </div>
+
+        @if (!Model.Tasks.Any())
+        {
+            <div class="empty-box">Không có nhiệm vụ cho ngày này</div>
+        }
+        else
+        {
+            foreach (var t in Model.Tasks)
+            {
+                <div class="task-card @(t.IsCompleted ? "done" : "")">
+                    <div class="task-title">@t.Title</div>
+                    <div class="task-note">@t.Note</div>
+
+                    <div class="task-actions">
+                        @if (!t.IsCompleted)
+                        {
+                            <form asp-action="CompleteTask" method="post">
+                                <input type="hidden" name="taskId" value="@t.TaskId" />
+                                <button class="btn btn-success btn-sm">
+                                    ✔ Hoàn thành
+                                </button>
+                            </form>
+                        }
+
+                        <form asp-action="DeleteTask" method="post"
+                              onsubmit="return confirm('Xóa nhiệm vụ này?')">
+                            <input type="hidden" name="taskId" value="@t.TaskId" />
+                            <button class="btn btn-danger btn-sm">
+                                🗑
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            }
+        }
+
+        <hr />
+
+        <!-- ===== DIARY ===== -->
+        <h5>📝 Nhật ký ngày @Model.SelectedDate.ToString("dd/MM/yyyy")</h5>
+
+        @if (!Model.DiaryEntries.Any())
+        {
+            <div class="empty-box">
+                Chưa có nhật ký cho ngày này
+            </div>
+        }
+        else
+        {
+            foreach (var d in Model.DiaryEntries)
+            {
+                <div class="diary-card">
+                    <div class="diary-date">
+                        📅 @d.EntryDate?.ToString("dd/MM/yyyy")
+                    </div>
+                    <div class="diary-content">
+                        @d.Description
+                    </div>
+                </div>
+            }
+        }
+
+    </div>
+</div>

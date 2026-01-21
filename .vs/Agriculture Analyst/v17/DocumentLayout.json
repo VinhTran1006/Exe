@@ -1,0 +1,1420 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\VisualCode\\Exe\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\inventory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\inventory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\inventory\\createinventory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\inventory\\createinventory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\plant\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\plant\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\inventory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\inventory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\plant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\plant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\agricultureanalystdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\agricultureanalystdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\repositories\\implementations\\inventorytransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\repositories\\implementations\\inventorytransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\inventorytransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\inventorytransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\diary\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\diary\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\analysts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\analysts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\services\\implementations\\inventorytransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\services\\implementations\\inventorytransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\services\\interfaces\\iinventorytransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\services\\interfaces\\iinventorytransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\repositories\\interfaces\\iinventorytransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\repositories\\interfaces\\iinventorytransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\item\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\item\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\wwwroot\\css\\login\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\wwwroot\\css\\login\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\wwwroot\\css\\style\\diary.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\wwwroot\\css\\style\\diary.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\wwwroot\\css\\style\\plant.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\wwwroot\\css\\style\\plant.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\planttask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\planttask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\diary\\createtask.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\diary\\createtask.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\controllers\\diarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\controllers\\diarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\repositories\\interfaces\\idiaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\repositories\\interfaces\\idiaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\repositories\\implementations\\diaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\repositories\\implementations\\diaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\diaryentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\diaryentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\services\\implementations\\diaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\services\\implementations\\diaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\repositories\\interfaces\\iplantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\repositories\\interfaces\\iplantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\services\\interfaces\\idiaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\services\\interfaces\\idiaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\services\\implementations\\planttaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\services\\implementations\\planttaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\services\\implementations\\plantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\services\\implementations\\plantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\services\\implementations\\geminivisionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\services\\implementations\\geminivisionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\services\\interfaces\\iplanttaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\services\\interfaces\\iplanttaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\viewmodel\\createplanttaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\viewmodel\\createplanttaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\viewmodel\\diaryindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\viewmodel\\diaryindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\controllers\\plantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\controllers\\plantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\repositories\\implementations\\planttaskrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\repositories\\implementations\\planttaskrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\repositories\\interfaces\\iplanttaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\repositories\\interfaces\\iplanttaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\aianalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\aianalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\services\\interfaces\\iplantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\services\\interfaces\\iplantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\plantimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\plantimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\plant\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\plant\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\plant\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\plant\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\repositories\\implementations\\plantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\repositories\\implementations\\plantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\services\\interfaces\\igeminivisionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\services\\interfaces\\igeminivisionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\repositories\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\repositories\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\properties\\data.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\properties\\data.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\ai\\prompt\\imageanalyzeprompt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\ai\\prompt\\imageanalyzeprompt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualCode\\Agriculture Analyst\\MIGRATION_SETUP_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualCode\\Agriculture Analyst\\IMPLEMENTATION_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\agriculture analyst.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\agriculture analyst.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\dtos\\signuprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\dtos\\signuprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\models\\dtos\\signinrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\models\\dtos\\signinrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|d:\\visualcode\\exe\\agriculture analyst\\wwwroot\\js\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}|",
+      "RelativeMoniker": "D:0:0:{C153842D-AA02-434C-94EF-77F94FACE113}|Agriculture Analyst\\Agriculture Analyst.csproj|solutionrelative:agriculture analyst\\wwwroot\\js\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualCode\\Agriculture Analyst\\AUTHENTICATION_IMPLEMENTATION_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualCode\\Agriculture Analyst\\QUICKSTART.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualCode\\Agriculture Analyst\\IMPLEMENTATION_CHECKLIST.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualCode\\Agriculture Analyst\\VISUAL_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualCode\\Agriculture Analyst\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualCode\\Agriculture Analyst\\DOCUMENTATION_INDEX.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualCode\\Agriculture Analyst\\FINAL_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualCode\\Agriculture Analyst\\FILE_INVENTORY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualCode\\Agriculture Analyst\\QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VisualCode\\Agriculture Analyst\\COMPLETION_CERTIFICATE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InventoryTransaction.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\InventoryTransaction.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\InventoryTransaction.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\InventoryTransaction.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\InventoryTransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T07:00:39.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Inventory\\Index.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Inventory\\Index.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Inventory\\Index.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Inventory\\Index.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAUwBsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T07:12:09.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Plant\\Create.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Plant\\Create.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Plant\\Create.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Plant\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-15T05:14:08.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InventoryController.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Controllers\\InventoryController.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Controllers\\InventoryController.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Controllers\\InventoryController.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Controllers\\InventoryController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAkwEYAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T07:03:57.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Inventory\\Create.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Inventory\\Create.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Inventory\\Create.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Inventory\\Create.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T07:12:43.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAC0AAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T04:04:36.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateInventory.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Inventory\\CreateInventory.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Inventory\\CreateInventory.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Inventory\\CreateInventory.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Inventory\\CreateInventory.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T07:13:06.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AgricultureAnalystDbContext.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\AgricultureAnalystDbContext.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\AgricultureAnalystDbContext.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\AgricultureAnalystDbContext.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\AgricultureAnalystDbContext.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAkwKoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T02:29:05.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Program.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Program.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Program.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAD4vxoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T04:15:33.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Plant\\Index.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Plant\\Index.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Plant\\Index.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Plant\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-15T05:13:45.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InventoryTransactionRepository.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Implementations\\InventoryTransactionRepository.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Repositories\\Implementations\\InventoryTransactionRepository.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Implementations\\InventoryTransactionRepository.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Repositories\\Implementations\\InventoryTransactionRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T07:01:47.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Diary\\Index.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Diary\\Index.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Diary\\Index.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Diary\\Index.cshtml",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-15T05:15:10.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Analysts\\Index.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Analysts\\Index.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Analysts\\Index.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Analysts\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-09T03:03:34.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAABcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T03:53:07.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Item\\Create.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Item\\Create.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Item\\Create.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Item\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T07:13:34.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IInventoryTransactionService.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Interfaces\\IInventoryTransactionService.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Services\\Interfaces\\IInventoryTransactionService.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Interfaces\\IInventoryTransactionService.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Services\\Interfaces\\IInventoryTransactionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T07:16:16.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "InventoryTransactionService.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Implementations\\InventoryTransactionService.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Services\\Implementations\\InventoryTransactionService.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Implementations\\InventoryTransactionService.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Services\\Implementations\\InventoryTransactionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T07:16:33.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IInventoryTransactionRepository.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Interfaces\\IInventoryTransactionRepository.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Repositories\\Interfaces\\IInventoryTransactionRepository.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Interfaces\\IInventoryTransactionRepository.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Repositories\\Interfaces\\IInventoryTransactionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T07:01:14.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Item.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\Item.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\Item.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\Item.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T06:59:41.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\Inventory.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\Inventory.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\Inventory.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\Inventory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T06:59:08.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\User.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\User.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\User.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T03:43:35.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAqwHEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T04:12:33.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T04:04:29.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Agriculture Analyst\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-05T03:55:19.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "plant.css",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\wwwroot\\css\\style\\plant.css",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\wwwroot\\css\\style\\plant.css",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\wwwroot\\css\\style\\plant.css",
+              "RelativeToolTip": "Agriculture Analyst\\wwwroot\\css\\style\\plant.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-15T03:57:44.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "login.css",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\wwwroot\\css\\login\\login.css",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\wwwroot\\css\\login\\login.css",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\wwwroot\\css\\login\\login.css",
+              "RelativeToolTip": "Agriculture Analyst\\wwwroot\\css\\login\\login.css",
+              "ViewState": "AgIAAHoBAAAAAAAAAAAuwJEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-05T03:54:51.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PlantTask.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\PlantTask.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\PlantTask.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\PlantTask.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\PlantTask.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T06:05:39.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "diary.css",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\wwwroot\\css\\style\\diary.css",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\wwwroot\\css\\style\\diary.css",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\wwwroot\\css\\style\\diary.css",
+              "RelativeToolTip": "Agriculture Analyst\\wwwroot\\css\\style\\diary.css",
+              "ViewState": "AgIAADwAAAAAAAAAAAAQwFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-19T06:24:57.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T04:04:42.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAYwH8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-20T13:42:16.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DiaryController.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Controllers\\DiaryController.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Controllers\\DiaryController.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Controllers\\DiaryController.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Controllers\\DiaryController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAwGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T05:07:59.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "DiaryEntry.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\DiaryEntry.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\DiaryEntry.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\DiaryEntry.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\DiaryEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T02:38:09.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CreateTask.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Diary\\CreateTask.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Diary\\CreateTask.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Diary\\CreateTask.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Diary\\CreateTask.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T03:55:24.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "DiaryRepository.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Implementations\\DiaryRepository.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Repositories\\Implementations\\DiaryRepository.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Implementations\\DiaryRepository.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Repositories\\Implementations\\DiaryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T02:37:11.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IPlantRepository.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Interfaces\\IPlantRepository.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Repositories\\Interfaces\\IPlantRepository.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Interfaces\\IPlantRepository.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Repositories\\Interfaces\\IPlantRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T03:33:59.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IDiaryRepository.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Interfaces\\IDiaryRepository.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Repositories\\Interfaces\\IDiaryRepository.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Interfaces\\IDiaryRepository.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Repositories\\Interfaces\\IDiaryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T02:36:45.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DiaryService.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Implementations\\DiaryService.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Services\\Implementations\\DiaryService.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Implementations\\DiaryService.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Services\\Implementations\\DiaryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T02:44:10.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "IDiaryService.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Interfaces\\IDiaryService.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Services\\Interfaces\\IDiaryService.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Interfaces\\IDiaryService.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Services\\Interfaces\\IDiaryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T02:40:35.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "PlantTaskService.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Implementations\\PlantTaskService.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Services\\Implementations\\PlantTaskService.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Implementations\\PlantTaskService.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Services\\Implementations\\PlantTaskService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T03:20:53.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "PlantService.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Implementations\\PlantService.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Services\\Implementations\\PlantService.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Implementations\\PlantService.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Services\\Implementations\\PlantService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T03:40:48.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "GeminiVisionService.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Implementations\\GeminiVisionService.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Services\\Implementations\\GeminiVisionService.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Implementations\\GeminiVisionService.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Services\\Implementations\\GeminiVisionService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T03:26:32.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Implementations\\AuthService.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Services\\Implementations\\AuthService.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Implementations\\AuthService.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Services\\Implementations\\AuthService.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAYwHkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T04:33:56.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IPlantTaskService.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Interfaces\\IPlantTaskService.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Services\\Interfaces\\IPlantTaskService.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Interfaces\\IPlantTaskService.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Services\\Interfaces\\IPlantTaskService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T03:20:25.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "CreatePlantTaskViewModel.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\ViewModel\\CreatePlantTaskViewModel.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\ViewModel\\CreatePlantTaskViewModel.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\ViewModel\\CreatePlantTaskViewModel.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\ViewModel\\CreatePlantTaskViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T03:34:23.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "DiaryIndexViewModel.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\ViewModel\\DiaryIndexViewModel.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\ViewModel\\DiaryIndexViewModel.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\ViewModel\\DiaryIndexViewModel.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\ViewModel\\DiaryIndexViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T03:33:44.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "PlantController.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Controllers\\PlantController.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Controllers\\PlantController.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Controllers\\PlantController.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Controllers\\PlantController.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAqwFAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T05:08:51.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "PlantTaskRepository .cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Implementations\\PlantTaskRepository .cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Repositories\\Implementations\\PlantTaskRepository .cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Implementations\\PlantTaskRepository .cs",
+              "RelativeToolTip": "Agriculture Analyst\\Repositories\\Implementations\\PlantTaskRepository .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T03:19:24.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IPlantTaskRepository.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Interfaces\\IPlantTaskRepository.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Repositories\\Interfaces\\IPlantTaskRepository.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Interfaces\\IPlantTaskRepository.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Repositories\\Interfaces\\IPlantTaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T03:18:17.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Plant.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\Plant.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\Plant.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\Plant.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\Plant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T02:28:46.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Aianalysis.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\Aianalysis.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\Aianalysis.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\Aianalysis.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\Aianalysis.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T04:27:12.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "IPlantService.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Interfaces\\IPlantService.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Services\\Interfaces\\IPlantService.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Interfaces\\IPlantService.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Services\\Interfaces\\IPlantService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T03:40:00.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Repositories\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Repositories\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T04:33:40.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "PlantImage.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\PlantImage.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\PlantImage.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\PlantImage.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\PlantImage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T03:30:13.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T03:45:45.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Plant\\Details.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Plant\\Details.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Plant\\Details.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Plant\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-15T05:14:48.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Plant\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Plant\\Edit.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Plant\\Edit.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Plant\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-15T05:14:27.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "PlantRepository.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Implementations\\PlantRepository.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Repositories\\Implementations\\PlantRepository.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Implementations\\PlantRepository.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Repositories\\Implementations\\PlantRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwBIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T03:35:54.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\UserRole.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\UserRole.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\UserRole.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T03:44:24.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\Role.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\Role.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T03:45:09.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Services\\Interfaces\\IAuthService.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Services\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T04:33:47.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "IGeminiVisionService.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Interfaces\\IGeminiVisionService.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Services\\Interfaces\\IGeminiVisionService.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Services\\Interfaces\\IGeminiVisionService.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Services\\Interfaces\\IGeminiVisionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T03:25:33.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Implementations\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Repositories\\Implementations\\UserRepository.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Repositories\\Implementations\\UserRepository.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Repositories\\Implementations\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T04:33:45.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T04:07:27.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\appsettings.json",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\appsettings.json",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\appsettings.json",
+              "RelativeToolTip": "Agriculture Analyst\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-09T05:18:29.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Data.sql",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Properties\\Data.sql",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Properties\\Data.sql",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Properties\\Data.sql",
+              "RelativeToolTip": "Agriculture Analyst\\Properties\\Data.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-01-05T04:48:10.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T04:04:32.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "ImageAnalyzePrompt.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\AI\\Prompt\\ImageAnalyzePrompt.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\AI\\Prompt\\ImageAnalyzePrompt.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\AI\\Prompt\\ImageAnalyzePrompt.cs",
+              "RelativeToolTip": "Agriculture Analyst\\AI\\Prompt\\ImageAnalyzePrompt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T03:34:47.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\appsettings.Development.json",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\appsettings.Development.json",
+              "RelativeToolTip": "Agriculture Analyst\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-09T03:27:29.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\DTOs\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\DTOs\\AuthResponseDto.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\DTOs\\AuthResponseDto.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\DTOs\\AuthResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T04:33:37.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "MIGRATION_SETUP_GUIDE.md",
+              "DocumentMoniker": "D:\\VisualCode\\Agriculture Analyst\\MIGRATION_SETUP_GUIDE.md",
+              "RelativeDocumentMoniker": "..\\Agriculture Analyst\\MIGRATION_SETUP_GUIDE.md",
+              "ToolTip": "D:\\VisualCode\\Agriculture Analyst\\MIGRATION_SETUP_GUIDE.md",
+              "RelativeToolTip": "..\\Agriculture Analyst\\MIGRATION_SETUP_GUIDE.md",
+              "ViewState": "AgIAAJYAAAAAAAAAAIBJwE8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-05T04:21:33.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "DOCUMENTATION_INDEX.md",
+              "DocumentMoniker": "D:\\VisualCode\\Agriculture Analyst\\DOCUMENTATION_INDEX.md",
+              "RelativeDocumentMoniker": "..\\Agriculture Analyst\\DOCUMENTATION_INDEX.md",
+              "ToolTip": "D:\\VisualCode\\Agriculture Analyst\\DOCUMENTATION_INDEX.md",
+              "RelativeToolTip": "..\\Agriculture Analyst\\DOCUMENTATION_INDEX.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-05T04:39:31.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "FINAL_SUMMARY.md",
+              "DocumentMoniker": "D:\\VisualCode\\Agriculture Analyst\\FINAL_SUMMARY.md",
+              "RelativeDocumentMoniker": "..\\Agriculture Analyst\\FINAL_SUMMARY.md",
+              "ToolTip": "D:\\VisualCode\\Agriculture Analyst\\FINAL_SUMMARY.md",
+              "RelativeToolTip": "..\\Agriculture Analyst\\FINAL_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-05T04:40:36.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "FILE_INVENTORY.md",
+              "DocumentMoniker": "D:\\VisualCode\\Agriculture Analyst\\FILE_INVENTORY.md",
+              "RelativeDocumentMoniker": "..\\Agriculture Analyst\\FILE_INVENTORY.md",
+              "ToolTip": "D:\\VisualCode\\Agriculture Analyst\\FILE_INVENTORY.md",
+              "RelativeToolTip": "..\\Agriculture Analyst\\FILE_INVENTORY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAP0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-05T04:41:25.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "QUICK_REFERENCE.md",
+              "DocumentMoniker": "D:\\VisualCode\\Agriculture Analyst\\QUICK_REFERENCE.md",
+              "RelativeDocumentMoniker": "..\\Agriculture Analyst\\QUICK_REFERENCE.md",
+              "ToolTip": "D:\\VisualCode\\Agriculture Analyst\\QUICK_REFERENCE.md",
+              "RelativeToolTip": "..\\Agriculture Analyst\\QUICK_REFERENCE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-05T04:41:49.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "COMPLETION_CERTIFICATE.md",
+              "DocumentMoniker": "D:\\VisualCode\\Agriculture Analyst\\COMPLETION_CERTIFICATE.md",
+              "RelativeDocumentMoniker": "..\\Agriculture Analyst\\COMPLETION_CERTIFICATE.md",
+              "ToolTip": "D:\\VisualCode\\Agriculture Analyst\\COMPLETION_CERTIFICATE.md",
+              "RelativeToolTip": "..\\Agriculture Analyst\\COMPLETION_CERTIFICATE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-05T04:42:32.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "IMPLEMENTATION_SUMMARY.md",
+              "DocumentMoniker": "D:\\VisualCode\\Agriculture Analyst\\IMPLEMENTATION_SUMMARY.md",
+              "RelativeDocumentMoniker": "..\\Agriculture Analyst\\IMPLEMENTATION_SUMMARY.md",
+              "ToolTip": "D:\\VisualCode\\Agriculture Analyst\\IMPLEMENTATION_SUMMARY.md",
+              "RelativeToolTip": "..\\Agriculture Analyst\\IMPLEMENTATION_SUMMARY.md",
+              "ViewState": "AgIAAKsAAAAAAAAAAIBJwJwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-05T04:36:05.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "VISUAL_GUIDE.md",
+              "DocumentMoniker": "D:\\VisualCode\\Agriculture Analyst\\VISUAL_GUIDE.md",
+              "RelativeDocumentMoniker": "..\\Agriculture Analyst\\VISUAL_GUIDE.md",
+              "ToolTip": "D:\\VisualCode\\Agriculture Analyst\\VISUAL_GUIDE.md",
+              "RelativeToolTip": "..\\Agriculture Analyst\\VISUAL_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIsCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-05T04:37:11.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "README.md",
+              "DocumentMoniker": "D:\\VisualCode\\Agriculture Analyst\\README.md",
+              "RelativeDocumentMoniker": "..\\Agriculture Analyst\\README.md",
+              "ToolTip": "D:\\VisualCode\\Agriculture Analyst\\README.md",
+              "RelativeToolTip": "..\\Agriculture Analyst\\README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAM0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-05T04:37:41.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "IMPLEMENTATION_CHECKLIST.md",
+              "DocumentMoniker": "D:\\VisualCode\\Agriculture Analyst\\IMPLEMENTATION_CHECKLIST.md",
+              "RelativeDocumentMoniker": "..\\Agriculture Analyst\\IMPLEMENTATION_CHECKLIST.md",
+              "ToolTip": "D:\\VisualCode\\Agriculture Analyst\\IMPLEMENTATION_CHECKLIST.md",
+              "RelativeToolTip": "..\\Agriculture Analyst\\IMPLEMENTATION_CHECKLIST.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-05T04:36:31.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "SignInRequestDto.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\DTOs\\SignInRequestDto.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\DTOs\\SignInRequestDto.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\DTOs\\SignInRequestDto.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\DTOs\\SignInRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T04:33:33.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "auth.js",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\wwwroot\\js\\auth.js",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\wwwroot\\js\\auth.js",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\wwwroot\\js\\auth.js",
+              "RelativeToolTip": "Agriculture Analyst\\wwwroot\\js\\auth.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-05T04:34:25.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "QUICKSTART.md",
+              "DocumentMoniker": "D:\\VisualCode\\Agriculture Analyst\\QUICKSTART.md",
+              "RelativeDocumentMoniker": "..\\Agriculture Analyst\\QUICKSTART.md",
+              "ToolTip": "D:\\VisualCode\\Agriculture Analyst\\QUICKSTART.md",
+              "RelativeToolTip": "..\\Agriculture Analyst\\QUICKSTART.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-05T04:35:28.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "SignUpRequestDto.cs",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\DTOs\\SignUpRequestDto.cs",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Models\\DTOs\\SignUpRequestDto.cs",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Models\\DTOs\\SignUpRequestDto.cs",
+              "RelativeToolTip": "Agriculture Analyst\\Models\\DTOs\\SignUpRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T04:33:30.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "AUTHENTICATION_IMPLEMENTATION_GUIDE.md",
+              "DocumentMoniker": "D:\\VisualCode\\Agriculture Analyst\\AUTHENTICATION_IMPLEMENTATION_GUIDE.md",
+              "RelativeDocumentMoniker": "..\\Agriculture Analyst\\AUTHENTICATION_IMPLEMENTATION_GUIDE.md",
+              "ToolTip": "D:\\VisualCode\\Agriculture Analyst\\AUTHENTICATION_IMPLEMENTATION_GUIDE.md",
+              "RelativeToolTip": "..\\Agriculture Analyst\\AUTHENTICATION_IMPLEMENTATION_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-05T04:35:07.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "Agriculture Analyst.csproj",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Agriculture Analyst.csproj",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Agriculture Analyst.csproj",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Agriculture Analyst.csproj",
+              "RelativeToolTip": "Agriculture Analyst\\Agriculture Analyst.csproj",
+              "ViewState": "AgIAAA4AAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-05T04:20:52.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Agriculture Analyst\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Agriculture Analyst\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T04:04:40.66Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

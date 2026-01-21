@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Analyze Image";
+}
+
+<h2>Analyze Image with Gemini AI</h2>
+
+<form asp-action="Analyze" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required />
+    <br /><br />
+
+    <textarea name="prompt" rows="4" cols="50"
+              placeholder="Nhập thêm yêu cầu phân tích...">
+Hãy phân tích hình ảnh này và trả về kết quả JSON
+    </textarea>
+
+    <br /><br />
+    <button type="submit">Analyze</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <h3>Result</h3>
+    <pre>@ViewBag.Result</pre>
+}

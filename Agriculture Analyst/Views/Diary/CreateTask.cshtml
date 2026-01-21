@@ -1,0 +1,47 @@
+﻿@model Agriculture_Analyst.Models.ViewModel.CreatePlantTaskViewModel
+<link rel="stylesheet" href="~/css/style/diary.css" asp-append-version="true" />
+
+
+<h3>➕ Thêm nhiệm vụ</h3>
+
+<form asp-action="CreateTask" method="post" class="task-form">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="PlantId" />
+
+    <div class="form-group">
+        <label>Tiêu đề *</label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Ghi chú</label>
+        <textarea asp-for="Note" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Ngày thực hiện *</label>
+        <input asp-for="NextDate" type="date" class="form-control" />
+        <span asp-validation-for="NextDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-check">
+        <input asp-for="IsRecurring" class="form-check-input" />
+        <label class="form-check-label">Lặp lại</label>
+    </div>
+
+    <div class="form-group">
+        <label>Chu kỳ (ngày)</label>
+        <input asp-for="RepeatIntervalDays" class="form-control" />
+        <span asp-validation-for="RepeatIntervalDays" class="text-danger"></span>
+    </div>
+
+    <button class="btn btn-success mt-2">Lưu</button>
+    <a asp-action="Index" asp-route-plantId="@Model.PlantId" class="btn btn-secondary mt-2">
+        Hủy
+    </a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

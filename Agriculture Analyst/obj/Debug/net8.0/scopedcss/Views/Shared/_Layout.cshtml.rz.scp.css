@@ -1,0 +1,154 @@
+/* =====================================
+   THEME VARIABLES – GREEN & WHITE
+===================================== */
+:root[b-33ps54pd04] {
+    --green-main: #2e7d32; /* xanh lá chủ đạo */
+    --green-dark: #1b5e20;
+    --green-light: #e8f5e9;
+    --green-soft: #f1f8f4;
+    --text-dark: #263238;
+    --text-muted: #607d8b;
+    --white: #ffffff;
+}
+
+/* =====================================
+   GLOBAL
+===================================== */
+body[b-33ps54pd04] {
+    background-color: var(--green-light);
+    color: var(--text-dark);
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+.navbar[b-33ps54pd04] {
+    background: linear-gradient( 90deg, var(--green-main), var(--green-dark) );
+    padding: 0.75rem 1.5rem;
+    border: none;
+}
+
+/* Brand */
+.navbar-brand[b-33ps54pd04] {
+    color: var(--white) !important;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+/* Nav links */
+.navbar-nav .nav-link[b-33ps54pd04] {
+    color: #e0f2f1 !important;
+    font-weight: 500;
+    margin-right: 1rem;
+    transition: all 0.2s ease;
+}
+
+    .navbar-nav .nav-link:hover[b-33ps54pd04] {
+        color: var(--white) !important;
+        text-decoration: underline;
+    }
+
+/* =====================================
+   USER / AUTH AREA
+===================================== */
+#nav-username[b-33ps54pd04] {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.user-avatar i[b-33ps54pd04] {
+    color: #c8e6c9;
+}
+
+/* Sign in button */
+.btn-outline-light[b-33ps54pd04] {
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+    .btn-outline-light:hover[b-33ps54pd04] {
+        background-color: var(--white);
+        color: var(--green-main);
+    }
+
+/* =====================================
+   DROPDOWN
+===================================== */
+.dropdown-menu[b-33ps54pd04] {
+    border-radius: 12px;
+    border: none;
+    padding: 0.5rem 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.dropdown-menu-dark[b-33ps54pd04] {
+    background-color: var(--green-dark);
+}
+
+.dropdown-item[b-33ps54pd04] {
+    color: #e8f5e9;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    transition: background 0.2s ease;
+}
+
+    .dropdown-item:hover[b-33ps54pd04] {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+.dropdown-divider[b-33ps54pd04] {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Logout */
+.dropdown-item.text-danger[b-33ps54pd04] {
+    color: #ffcdd2 !important;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+.container main[b-33ps54pd04] {
+    background-color: var(--white);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+footer[b-33ps54pd04] {
+    background-color: var(--green-soft);
+    font-size: 0.9rem;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+    footer a[b-33ps54pd04] {
+        color: var(--green-main);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        footer a:hover[b-33ps54pd04] {
+            text-decoration: underline;
+        }
+
+/* =====================================
+   RESPONSIVE TWEAK
+===================================== */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link[b-33ps54pd04] {
+        margin-right: 0;
+        padding: 0.5rem 0;
+    }
+
+    .container main[b-33ps54pd04] {
+        padding: 1.2rem;
+    }
+}

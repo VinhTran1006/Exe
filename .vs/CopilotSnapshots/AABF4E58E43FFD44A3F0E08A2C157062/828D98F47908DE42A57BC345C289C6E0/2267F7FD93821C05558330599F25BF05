@@ -1,0 +1,125 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/css/login/login.css" />
+
+<body>
+    <div class="container" id="container">
+        <!-- Sign Up Form -->
+        <div class="form-container sign-up-container">
+            <form id="signupForm">
+                <div id="signupAlert"></div>
+                <h1>Create Account</h1>
+
+                <div class="form-group">
+                    <input type="text" id="regUsername" name="Username" placeholder="User Name" required>
+                    <div class="error-message" id="usernameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="regEmail" name="Email" placeholder="Email" required>
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="regName" name="Name" placeholder="Full Name" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="tel" id="regPhone" name="Phone" placeholder="Phone Number">
+                        <div class="error-message" id="phoneError"></div>
+                    </div>
+                    <div class="form-group">
+                        <select id="regGender" name="Gender">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="date" id="regDateOfBirth" name="DateOfBirth" placeholder="Date of Birth">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="regAddress" name="Address" placeholder="Address (Optional)">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="regPassword" name="Password" placeholder="Password (Min 6 characters)" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="regConfirmPassword" name="ConfirmPassword" placeholder="Confirm Password" required>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+
+                <button type="submit" id="btnSignUp">Sign Up</button>
+                <p class="form-note">By signing up, you agree to our Terms & Conditions</p>
+            </form>
+        </div>
+
+        <!-- Sign In Form -->
+        <div class="form-container sign-in-container">
+            <form class="login-form">
+                <button type="button" id="btnHome">Home</button>
+                <div id="loginAlert"></div>
+                <h1>Sign in</h1>
+
+                <div class="form-group">
+                    <input type="text" id="loginUsername" name="Username" placeholder="User Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="loginPassword" name="Password" placeholder="Password" required>
+                </div>
+
+                <button type="submit" id="btnSignIn">Sign In</button>
+
+                <div class="divider">OR</div>
+
+                <p class="form-note" style="margin-top: 8px; text-align: center;">
+                    <a href="/Logins/ForgotPassword" style="color: #e74c3c; font-weight: bold;">Forgot your password?</a>
+                </p>
+
+            </form>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button type="button" class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start your journey with us</p>
+                    <button type="button" class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const overlaySignUp = document.getElementById('signUp');
+        const overlaySignIn = document.getElementById('signIn');
+
+        overlaySignUp.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        overlaySignIn.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+    </script>
+
+    <script src="~/js/auth.js"></script>
+</body>

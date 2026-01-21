@@ -1,0 +1,20 @@
+﻿@model Agriculture_Analyst.Models.Item
+
+<h2>🧰 Thêm vật tư</h2>
+
+<form asp-action="Create" method="post" class="card p-4">
+
+    @Html.AntiForgeryToken()
+
+    <div class="mb-3">
+        <label>Tên vật tư</label>
+        <input asp-for="ItemName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Đơn vị</label>
+        <input asp-for="Unit" class="form-control" />
+    </div>
+
+    <button class="btn btn-success">Lưu</button>
+</form>

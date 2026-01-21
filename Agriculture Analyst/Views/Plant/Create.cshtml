@@ -1,0 +1,31 @@
+﻿@model Plant
+
+<form method="post">
+    <div class="form-group">
+        <label>Tên cây</label>
+        <input asp-for="PlantName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Loại cây</label>
+        <input asp-for="PlantType" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Ngày bắt đầu</label>
+        <input asp-for="StartDate" type="date" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Diện tích (m²)</label>
+        <input asp-for="Area" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Trạng thái</label>
+        <input asp-for="Status" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Lưu</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>
