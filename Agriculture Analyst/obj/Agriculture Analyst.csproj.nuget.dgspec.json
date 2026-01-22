@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VisualCode\\Exe\\Agriculture Analyst\\Agriculture Analyst.csproj": {}
+    "D:\\SPRING2026\\EXE\\Project\\Exe\\Agriculture Analyst\\Agriculture Analyst.csproj": {}
   },
   "projects": {
-    "D:\\VisualCode\\Exe\\Agriculture Analyst\\Agriculture Analyst.csproj": {
+    "D:\\SPRING2026\\EXE\\Project\\Exe\\Agriculture Analyst\\Agriculture Analyst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Agriculture Analyst.csproj",
+        "projectUniqueName": "D:\\SPRING2026\\EXE\\Project\\Exe\\Agriculture Analyst\\Agriculture Analyst.csproj",
         "projectName": "Agriculture Analyst",
-        "projectPath": "D:\\VisualCode\\Exe\\Agriculture Analyst\\Agriculture Analyst.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\VisualCode\\Exe\\Agriculture Analyst\\obj\\",
+        "projectPath": "D:\\SPRING2026\\EXE\\Project\\Exe\\Agriculture Analyst\\Agriculture Analyst.csproj",
+        "packagesPath": "C:\\Users\\nhutt\\.nuget\\packages\\",
+        "outputPath": "D:\\SPRING2026\\EXE\\Project\\Exe\\Agriculture Analyst\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nhutt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
