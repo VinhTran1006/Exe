@@ -9,7 +9,7 @@
 <form asp-action="Create" method="post" class="card p-4 shadow-sm">
 
     @Html.AntiForgeryToken()
-
+    <div asp-validation-summary="All" class="text-danger mb-3 border p-2 border-danger rounded"></div>
     <select asp-for="InvId"
             asp-items="ViewBag.InventoryList"
             class="form-select">

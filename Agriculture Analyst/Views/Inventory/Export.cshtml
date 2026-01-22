@@ -1,0 +1,129 @@
+﻿@model Agriculture_Analyst.Models.InventoryTransaction
+
+@{
+    ViewData["Title"] = "Xuất kho tính lãi";
+}
+
+<h2 class="mb-4 text-warning">📤 Xuất kho (Tính lãi suất)</h2>
+
+<form asp-action="Export" method="post" class="card p-4 shadow-sm border-warning">
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" asp-for="ItemId" id="hiddenItemId" />
+    <input type="hidden" asp-for="InvId" id="hiddenInvId" />
+
+    <div class="row">
+        <div class="col-12 mb-3">
+            <label class="form-label fw-bold">Chọn lô hàng cần xuất</label>
+            <select asp-for="RefTransId"
+                    id="BatchSelect"
+                    asp-items="ViewBag.BatchList"
+                    class="form-select"
+                    onchange="calculatePrice()">
+                <option value="">-- Chọn lô hàng nhập --</option>
+            </select>
+            <span asp-validation-for="RefTransId" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <div class="p-3 bg-light rounded border">
+                <p class="mb-1">📅 Ngày nhập: <strong id="lblDate">...</strong></p>
+
+                <p class="mb-1">📦 Tồn lô này: <strong id="lblAvailable" class="text-primary">...</strong></p>
+
+                <p class="mb-1">⏳ Số ngày tồn: <strong id="lblDays" class="text-danger">0</strong> ngày</p>
+                <p class="mb-1">💰 Giá gốc: <strong id="lblOriginalPrice">0</strong></p>
+                <p class="mb-0">📈 Lãi suất: <strong id="lblRate">0</strong> %/ngày</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label class="form-label">Số lượng xuất</label>
+                <input asp-for="SoLuong" class="form-control" type="number" min="1" required />
+                <span asp-validation-for="SoLuong" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold text-success">Đơn giá xuất (Đã cộng lãi)</label>
+                <input asp-for="DonGia" id="txtExportPrice" class="form-control fw-bold" readonly />
+                <small class="text-muted">Công thức: Giá gốc + (Giá gốc * Lãi * Ngày)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <label class="form-label fw-bold">Dùng cho cây trồng</label>
+            <select asp-for="PlantId" asp-items="ViewBag.PlantList" class="form-select">
+                <option value="">-- Không chỉ định --</option>
+            </select>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-warning fw-bold w-100">💾 Xác nhận Xuất kho</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        function calculatePrice() {
+            var transId = document.getElementById("BatchSelect").value;
+
+            // Nếu user chọn dòng "-- Chọn lô hàng --" thì reset và thoát
+            if (!transId) {
+                document.getElementById("lblAvailable").innerText = "...";
+                document.getElementById("txtExportPrice").value = "";
+                return;
+            }
+
+            // Gọi API lấy thông tin lô hàng
+            fetch('/Inventory/GetBatchDetails?transId=' + transId)
+                .then(response => {
+                    if (!response.ok) throw new Error("Lỗi kết nối");
+                    return response.json();
+                })
+                .then(data => {
+                    if (!data) return;
+
+                    // 1. Điền thông tin ẩn (ItemId, InvId)
+                    document.getElementById("hiddenItemId").value = data.itemId;
+                    document.getElementById("hiddenInvId").value = data.invId;
+
+                    // 2. ✅ Cập nhật hiển thị Tồn kho (Dùng remainingQty viết thường do JSON chuẩn)
+                    var qty = data.remainingQty !== undefined ? data.remainingQty : 0;
+                    document.getElementById("lblAvailable").innerText = qty;
+
+                    // 3. Tính số ngày tồn kho
+                    var importDate = new Date(data.ngayNhap);
+                    var today = new Date();
+                    var timeDiff = today - importDate;
+                    var days = Math.floor(timeDiff / (1000 * 3600 * 24)); // Chuyển mili giây sang ngày
+                    if (days < 0) days = 0;
+
+                    // 4. Lấy giá nhập và lãi suất
+                    var price = data.donGia;
+                    var rate = data.laiSuat || 0;
+
+                    // 5. Tính giá: Giá gốc + Lãi
+                    var interestAmount = price * (rate / 100) * days;
+                    var finalPrice = price + interestAmount;
+
+                    // 6. Hiển thị các thông tin còn lại
+                    document.getElementById("lblDate").innerText = new Date(data.ngayNhap).toLocaleDateString('vi-VN');
+                    document.getElementById("lblDays").innerText = days;
+                    document.getElementById("lblOriginalPrice").innerText = price.toLocaleString('vi-VN');
+                    document.getElementById("lblRate").innerText = rate;
+
+                    // Làm tròn giá và gán vào input
+                    document.getElementById("txtExportPrice").value = Math.round(finalPrice);
+                })
+                .catch(err => console.error("Lỗi:", err));
+        }
+    </script>
+}

@@ -295,3 +295,152 @@ D:\VisualCode\Exe\Agriculture Analyst\obj\Debug\net8.0\Agricult.427931F4.Up2Date
 D:\VisualCode\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.genruntimeconfig.cache
 D:\VisualCode\Exe\Agriculture Analyst\obj\Debug\net8.0\ref\Agriculture Analyst.dll
 D:\VisualCode\Exe\Agriculture Analyst\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\appsettings.Development.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\appsettings.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Agriculture Analyst.staticwebassets.runtime.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Agriculture Analyst.staticwebassets.endpoints.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Agriculture Analyst.exe
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Agriculture Analyst.deps.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Agriculture Analyst.runtimeconfig.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Agriculture Analyst.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Agriculture Analyst.pdb
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Azure.Core.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Azure.Identity.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\BCrypt.Net-Core.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Humanizer.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.ClientModel.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.CodeDom.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.Memory.Data.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.csproj.AssemblyReference.cache
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.GeneratedMSBuildEditorConfig.editorconfig
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.AssemblyInfoInputs.cache
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.AssemblyInfo.cs
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.csproj.CoreCompileInputs.cache
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.MvcApplicationPartsAssemblyInfo.cache
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.RazorAssemblyInfo.cache
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.RazorAssemblyInfo.cs
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.sourcelink.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\scopedcss\bundle\Agriculture Analyst.styles.css
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\scopedcss\projectbundle\Agriculture Analyst.bundle.scp.css
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\staticwebassets.build.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\staticwebassets.development.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agricult.427931F4.Up2Date
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\refint\Agriculture Analyst.dll
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.pdb
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\Agriculture Analyst.genruntimeconfig.cache
+D:\SPRING2026\EXE\Project\Exe\Agriculture Analyst\obj\Debug\net8.0\ref\Agriculture Analyst.dll

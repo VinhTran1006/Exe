@@ -2,44 +2,48 @@
 <link rel="stylesheet" href="~/css/style/plant.css" />
 
 <h2 class="mb-3">🌱 Danh sách vụ cây trồng</h2>
-<div class="mb-3 d-flex gap-2">
+
+<div class="mb-4 d-flex gap-2 flex-wrap">
     <a asp-action="Create" class="btn btn-primary">
         + Thêm vụ mới
     </a>
 
-    <a asp-controller="Inventory"
-       asp-action="Index"
-       class="btn btn-success">
-        📦 Quản lý kho
+    <div class="vr mx-2"></div> <a asp-controller="Inventory" asp-action="Index" class="btn btn-outline-secondary">
+        📜 Lịch sử nhập/xuất
+    </a>
+
+    <a asp-controller="Inventory" asp-action="Export" class="btn btn-warning text-dark fw-bold">
+        📤 Xuất kho dùng
+    </a>
+
+    <a asp-controller="Inventory" asp-action="StockReport" class="btn btn-info text-white fw-bold">
+        📊 Báo cáo tồn kho
     </a>
 </div>
-<a asp-action="Create" class="btn btn-primary mb-3">+ Thêm vụ mới</a>
 
 <div class="plant-grid">
     @foreach (var p in Model)
     {
-        <a asp-controller="Diary"
-           asp-action="Index"
-           asp-route-plantId="@p.PlantId"
-           class="plant-card-link">
+        <div class="plant-card position-relative">
+            <a asp-controller="Diary"
+               asp-action="Index"
+               asp-route-plantId="@p.PlantId"
+               class="stretched-link"></a>
 
-            <div class="plant-card">
-                <div class="plant-header">
-                    <h5>@p.PlantName</h5>
-                    <span class="status">@p.Status</span>
-                </div>
-
-                <div class="plant-body">
-                    <p><strong>Loại:</strong> @p.PlantType</p>
-                    <p><strong>Diện tích:</strong> @p.Area m²</p>
-                </div>
-
-                <div class="plant-actions">
-                    <a asp-action="Edit" asp-route-id="@p.PlantId">✏️ Sửa</a>
-                    <a asp-action="Delete" asp-route-id="@p.PlantId">🗑 Xóa</a>
-                </div>
+            <div class="plant-header">
+                <h5>@p.PlantName</h5>
+                <span class="status">@p.Status</span>
             </div>
 
-        </a>
+            <div class="plant-body">
+                <p><strong>Loại:</strong> @p.PlantType</p>
+                <p><strong>Diện tích:</strong> @p.Area m²</p>
+            </div>
+
+            <div class="plant-actions" style="position: relative; z-index: 2;">
+                <a asp-action="Edit" asp-route-id="@p.PlantId" class="btn btn-sm btn-light">✏️ Sửa</a>
+                <a asp-action="Delete" asp-route-id="@p.PlantId" class="btn btn-sm btn-danger text-white">🗑 Xóa</a>
+            </div>
+        </div>
     }
 </div>
