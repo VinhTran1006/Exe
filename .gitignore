@@ -1,4 +1,84 @@
+############################
+## Visual Studio / .NET
+############################
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio workspace
 .vs/
+
+# Build results
 bin/
 obj/
-*.user
+[Bb]uild/
+[Bb]uilds/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+############################
+## ASP.NET
+############################
+wwwroot/lib/
+wwwroot/dist/
+
+############################
+## Testing
+############################
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+############################
+## NuGet
+############################
+*.nupkg
+*.snupkg
+.nuget/packages/
+.nuget/cache/
+.nuget/temp/
+
+############################
+## OS generated
+############################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+############################
+## Environment / Secrets
+############################
+.env
+.env.*
+appsettings.Development.json
+appsettings.Local.json
+
+############################
+## Docker
+############################
+docker-compose.override.yml
+**/*.env
+
+############################
+## Others
+############################
+*.tmp
+*.bak
+*.swp
+*.cache
