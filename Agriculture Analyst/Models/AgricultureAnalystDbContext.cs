@@ -180,6 +180,10 @@ public partial class AgricultureAnalystDbContext : DbContext
             entity.HasOne(e => e.User)
                 .WithMany(u => u.InventoryTransactions)
                 .HasForeignKey(e => e.UserId);
+            entity.HasOne(e => e.Plant)
+          .WithMany() // Bên Plant không cần List<Transaction> cũng được, hoặc bạn thêm vào nếu muốn
+          .HasForeignKey(e => e.PlantId)
+          .OnDelete(DeleteBehavior.SetNull);
         });
 
 

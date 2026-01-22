@@ -1,41 +1,77 @@
 ﻿@model IEnumerable<Agriculture_Analyst.Models.InventoryTransaction>
 
 @{
-    ViewData["Title"] = "Nhập kho";
+    ViewData["Title"] = "Lịch sử giao dịch";
 }
 
-<h2 class="mb-3">📦 Lịch sử nhập kho</h2>
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary fw-bold">📜 Lịch sử Giao dịch Kho</h2>
+        <div>
+            <a asp-action="Create" class="btn btn-success me-2">
+                ➕ Nhập kho
+            </a>
+            <a asp-action="Export" class="btn btn-warning fw-bold">
+                📤 Xuất kho
+            </a>
+        </div>
+    </div>
 
-<a asp-action="Create" class="btn btn-success mb-3">
-    ➕ Nhập kho
-</a>
+    <div class="card shadow border-0">
+        <div class="card-body p-0">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="bg-light text-secondary">
+                    <tr>
+                        <th class="ps-4">Loại</th>
+                        <th>Kho / Vật tư</th>
+                        <th class="text-center">Số lượng</th>
+                        <th class="text-end">Đơn giá</th>
+                        <th class="text-end">Thành tiền</th>
+                        <th class="text-center">Ngày</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        // Kiểm tra loại giao dịch: 1 là Nhập, 2 là Xuất
+                        bool isImport = item.Type == 1;
+                        string rowClass = isImport ? "" : "bg-warning bg-opacity-10";
+                        string badgeClass = isImport ? "bg-success" : "bg-warning text-dark";
+                        string badgeText = isImport ? "📥 Nhập" : "📤 Xuất";
+                        string moneyColor = isImport ? "text-success" : "text-danger";
+                        string sign = isImport ? "+" : "-";
 
-<table class="table table-bordered table-hover">
-    <thead class="table-success">
-        <tr>
-            <th>Kho</th>
-            <th>Vật tư</th>
-            <th>Số lượng</th>
-            <th>Đơn giá</th>
-            <th>Thành tiền</th>
-            <th>Lãi suất</th>
-            <th>Ngày</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Inventory.InvName</td>
-                <td>@item.Item.ItemName</td>
-                <td>@item.SoLuong</td>
-                <td>@item.DonGia.ToString("N0")</td>
-                <td class="fw-bold text-success">
-                    @item.ThanhTien.ToString("N0")
-                </td>
-                <td>@item.LaiSuat %</td>
-                <td>@item.?NgayGiaoDich.ToString("dd/MM/yyyy")</td>
-            </tr>
-        }
-    </tbody>
-</table>
+                        <tr class="@rowClass">
+                            <td class="ps-4">
+                                <span class="badge @badgeClass rounded-pill">@badgeText</span>
+                            </td>
+                            <td>
+                                <div class="fw-bold text-dark">@item.Inventory.InvName</div>
+                                <div class="small text-muted">@item.Item.ItemName</div>
+                            </td>
+                            <td class="text-center fw-bold fs-5">
+                                @item.SoLuong
+                            </td>
+                            <td class="text-end text-muted">
+                                @item.DonGia.ToString("N0")
+                            </td>
+                            <td class="text-end fw-bold @moneyColor">
+                                @sign @item.ThanhTien.ToString("N0")
+                            </td>
+                            <td class="text-center text-secondary small">
+                                @(item.NgayGiaoDich.HasValue? item.NgayGiaoDich.Value.ToString("dd/MM/yyyy HH:mm") : "-")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            @if (!Model.Any())
+            {
+                <div class="text-center py-5 text-muted">
+                    <p>Chưa có giao dịch nào.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -29,6 +29,10 @@ namespace Agriculture_Analyst.Controllers
         {
             return View();
         }
+        public IActionResult HomePage()
+        {
+            return View();
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -111,7 +115,7 @@ namespace Agriculture_Analyst.Controllers
             ); 
             
 
-            return RedirectToAction("Index", "Plant");
+            return RedirectToAction("HomePage", "Home");
         }
 
 

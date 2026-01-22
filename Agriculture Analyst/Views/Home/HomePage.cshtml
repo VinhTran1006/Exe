@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+<link rel="stylesheet" href="~/css/style/home.css" />
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+</head>
+<body>
+
+    
+
+    <!-- MAIN -->
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <ul>
+                <li>🏠 Trang chủ</li>
+                <li>👤 Trang cá nhân</li>
+                
+                <li>📸 Ảnh</li>
+                <li>⚙️ Cài đặt</li>
+            </ul>
+        </div>
+
+        <!-- FEED -->
+        <div class="feed">
+
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-avatar"></div>
+                    <div>
+                        <div class="post-name">Nguyễn Văn A</div>
+                        <small>Vừa xong</small>
+                    </div>
+                </div>
+
+                <div class="post-content">
+                    Đây là bài viết đầu tiên 🚀
+                </div>
+                <img src="~/Img/a.jpg" class="post-image" />
+                <div class="post-actions">
+                    <div>👍 Thích</div>
+                    <div>💬 Bình luận</div>
+                    <div>↗ Chia sẻ</div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-avatar"></div>
+                    <div>
+                        <div class="post-name">Nguyễn Văn A</div>
+                        <small>Vừa xong</small>
+                    </div>
+                </div>
+
+                <div class="post-content">
+                    Đây là bài viết đầu tiên 🚀
+                </div>
+                <img src="~/Img/b.jpg" class="post-image" />
+                <div class="post-actions">
+                    <div>👍 Thích</div>
+                    <div>💬 Bình luận</div>
+                    <div>↗ Chia sẻ</div>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <!-- RIGHT BAR -->
+        <div class="rightbar">
+            <h4>Gợi ý kết bạn</h4>
+            <p>👤 User 1</p>
+            <p>👤 User 2</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

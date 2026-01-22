@@ -152,3 +152,17 @@ footer {
         padding: 1.2rem;
     }
 }
+/*Logo*/
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+    .navbar-brand .navbar-logo {
+        height: 36px !important;
+        width: auto !important;
+        max-height: 36px !important;
+        object-fit: contain;
+    }
+
+
