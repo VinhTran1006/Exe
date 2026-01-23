@@ -3,22 +3,32 @@
 
 <h2 class="mb-3">🌱 Danh sách vụ cây trồng</h2>
 
-<div class="mb-4 d-flex gap-2 flex-wrap">
+<div class="mb-4 d-flex gap-2 flex-wrap align-items-center">
+
     <a asp-action="Create" class="btn btn-primary">
         + Thêm vụ mới
     </a>
 
-    <div class="vr mx-2"></div> <a asp-controller="Inventory" asp-action="Index" class="btn btn-outline-secondary">
-        📜 Lịch sử nhập/xuất
+    <div class="vr mx-2"></div> <a asp-controller="Inventory" asp-action="Index" class="btn btn-outline-secondary" title="Xem lịch sử nhập xuất">
+        📜 Lịch sử
     </a>
 
     <a asp-controller="Inventory" asp-action="Export" class="btn btn-warning text-dark fw-bold">
-        📤 Xuất kho dùng
+        📤 Xuất dùng
     </a>
 
     <a asp-controller="Inventory" asp-action="StockReport" class="btn btn-info text-white fw-bold">
-        📊 Báo cáo tồn kho
+        📊 Tồn kho
     </a>
+
+    <div class="vr mx-2"></div> <a asp-controller="Item" asp-action="Index" class="btn btn-secondary">
+        🧪 QL Vật tư
+    </a>
+
+    <a asp-controller="Warehouse" asp-action="Index" class="btn btn-dark">
+        🏭 QL Kho bãi
+    </a>
+
 </div>
 
 <div class="plant-grid">

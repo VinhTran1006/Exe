@@ -13,6 +13,18 @@
         </div>
     </div>
 
+    <div class="card p-3 mb-4 bg-light border-0 shadow-sm">
+        <form method="get" asp-action="StockReport" class="d-flex align-items-center gap-3">
+            <label class="fw-bold text-nowrap">🔍 Xem kho:</label>
+            <select name="invId"
+                    class="form-select w-auto"
+                    asp-items="ViewBag.InventoryList"
+                    onchange="this.form.submit()">
+                <option value="">-- Tất cả các kho --</option>
+            </select>
+        </form>
+    </div>
+
     <div class="card shadow-sm border-0">
         <div class="card-body p-0">
             <table class="table table-hover mb-0 align-middle">
@@ -22,7 +34,7 @@
                         <th class="text-center">Đơn vị</th>
                         <th class="text-center text-success">Tổng Nhập</th>
                         <th class="text-center text-danger">Tổng Xuất</th>
-                        <th class="text-center fw-bold">Tồn kho hiện tại</th>
+                        <th class="text-center fw-bold">Tồn kho</th>
                         <th>Trạng thái</th>
                     </tr>
                 </thead>
@@ -34,13 +46,9 @@
                             <td class="text-center text-muted">@item.Unit</td>
                             <td class="text-center text-success">+@item.TotalImport</td>
                             <td class="text-center text-danger">-@item.TotalExport</td>
-
                             <td class="text-center">
-                                <span class="badge rounded-pill bg-info fs-6">
-                                    @item.StockQuantity
-                                </span>
+                                <span class="badge rounded-pill bg-info fs-6">@item.StockQuantity</span>
                             </td>
-
                             <td>
                                 @if (item.StockQuantity <= 0)
                                 {
@@ -48,10 +56,12 @@
                                 }
                                 else if (item.StockQuantity < 10)
                                 {
+
                                     <span class="badge bg-warning text-dark">Sắp hết</span>
                                 }
                                 else
                                 {
+
                                     <span class="badge bg-success">Sẵn sàng</span>
                                 }
                             </td>
@@ -59,13 +69,6 @@
                     }
                 </tbody>
             </table>
-
-            @if (!Model.Any())
-            {
-                <div class="text-center py-5 text-muted">
-                    <p>Chưa có dữ liệu kho nào.</p>
-                </div>
-            }
         </div>
     </div>
 </div>
