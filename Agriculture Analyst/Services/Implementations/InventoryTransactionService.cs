@@ -34,9 +34,9 @@ public class InventoryTransactionService : IInventoryTransactionService
         // Giá xuất có thể là 0 hoặc tính theo bình quân gia quyền (ở đây tôi để user tự nhập hoặc mặc định 0)
         _repo.Add(trans);
     }
-    public IEnumerable<InventoryReportViewModel> GetCurrentStock(int userId)
+    public IEnumerable<InventoryReportViewModel> GetCurrentStock(int userId, int? invId)
     {
-        return _repo.GetInventoryReport(userId);
+        return _repo.GetInventoryReport(userId, invId);
     }
 
 }

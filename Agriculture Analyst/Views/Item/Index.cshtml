@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Agriculture_Analyst.Models.Item>
+@{
+    ViewData["Title"] = "Danh sách Vật tư";
+}
+
+<div class="container mt-3">
+    <h3>🧪 Danh mục Vật tư</h3>
+    <a asp-action="Create" class="btn btn-primary mb-3">+ Thêm vật tư mới</a>
+
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Tên vật tư</th>
+                <th>Đơn vị tính</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ItemName</td>
+                    <td>@item.Unit</td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-secondary">Sửa</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
