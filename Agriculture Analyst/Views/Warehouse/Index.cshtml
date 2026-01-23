@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Agriculture_Analyst.Models.Inventory>
+@{
+    ViewData["Title"] = "Quản lý Kho";
+}
+
+<div class="container mt-3">
+    <h3>🏭 Danh sách Kho hàng</h3>
+    <a asp-action="Create" class="btn btn-success mb-3">+ Tạo kho mới</a>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">@item.InvName</h5>
+                        <p class="text-muted small">Ngày tạo: @item.CreatedAt.ToString("dd/MM/yyyy")</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Đổi tên</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

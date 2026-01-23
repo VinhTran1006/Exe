@@ -79,27 +79,40 @@ public class InventoryController : Controller
     }
     // File: Controllers/InventoryController.cs
 
-    public IActionResult Export()
+    public IActionResult Export(int? filterInvId) // Thêm tham số filterInvId
     {
         var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-        // 1. Lấy danh sách các giao dịch NHẬP kho (Type = 1)
-        // Để hiển thị ra dropdown: "Tên vật tư - Ngày nhập - Giá nhập"
-        var importBatches = _context.InventoryTransactions
+        // 1. Query lấy lô hàng (Lọc theo kho nếu người dùng đã chọn)
+        var query = _context.InventoryTransactions
             .Include(t => t.Item)
             .Include(t => t.Inventory)
-            .Where(t => t.UserId == userId && t.Type == 1) // Chỉ lấy đơn Nhập
+            .Where(t => t.UserId == userId && t.Type == 1);
+
+        if (filterInvId.HasValue)
+        {
+            query = query.Where(t => t.InvId == filterInvId.Value);
+        }
+
+        var importBatches = query
             .OrderByDescending(t => t.NgayGiaoDich)
             .Select(t => new
             {
                 TransId = t.TransId,
-                DisplayText = $"{t.Item.ItemName} (Kho: {t.Inventory.InvName}) - Nhập: {t.NgayGiaoDich:dd/MM/yyyy} - Giá: {t.DonGia:N0}"
+                // Hiển thị tên ngắn gọn hơn nếu đã lọc kho
+                DisplayText = filterInvId.HasValue
+                    ? $"{t.Item.ItemName} - Nhập: {t.NgayGiaoDich:dd/MM/yyyy} - Giá: {t.DonGia:N0}"
+                    : $"{t.Item.ItemName} ({t.Inventory.InvName}) - Nhập: {t.NgayGiaoDich:dd/MM/yyyy}"
             })
             .ToList();
 
         ViewBag.BatchList = new SelectList(importBatches, "TransId", "DisplayText");
 
-        // Giữ nguyên list cây trồng
+        // 2. List danh sách kho để người dùng chọn lọc
+        ViewBag.InventoryList = new SelectList(
+            _context.Inventories.Where(x => x.UserId == userId).ToList(),
+            "InvId", "InvName", filterInvId);
+
         ViewBag.PlantList = new SelectList(_context.Plants.Where(u => u.UserId == userId && u.Status == "Đang trồng"), "PlantId", "PlantName");
 
         return View();
@@ -197,11 +210,20 @@ public class InventoryController : Controller
         }
     }
 
-    public IActionResult StockReport()
+    public IActionResult StockReport(int? invId) // Thêm tham số invId
     {
         var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-        var reportData = _service.GetCurrentStock(userId);
+        // 1. Load danh sách kho để hiển thị Dropdown
+        ViewBag.InventoryList = new SelectList(
+            _context.Inventories.Where(x => x.UserId == userId).ToList(),
+            "InvId", "InvName", invId);
+
+        // 2. Gọi Service với tham số invId (nếu null thì nó lấy tất cả)
+        var reportData = _service.GetCurrentStock(userId, invId);
+
+        // Lưu lại kho đang chọn để hiển thị tiêu đề
+        ViewBag.SelectedInvId = invId;
 
         return View(reportData);
     }

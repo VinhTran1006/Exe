@@ -38,29 +38,34 @@ public class InventoryTransactionRepository : IInventoryTransactionRepository
 
         return imported - exported;
     }
-    public IEnumerable<InventoryReportViewModel> GetInventoryReport(int userId)
+    // Nhớ sửa cả trong Interface IInventoryTransactionRepository nữa nhé:
+    // IEnumerable<InventoryReportViewModel> GetInventoryReport(int userId, int? invId);
+
+    public IEnumerable<InventoryReportViewModel> GetInventoryReport(int userId, int? invId)
     {
         var query = _context.InventoryTransactions
-            .Where(t => t.UserId == userId)
-            .GroupBy(t => t.Item) // Nhóm theo Item (Vật tư)
+            .Include(t => t.Item)
+            .Where(t => t.UserId == userId);
+
+        // Nếu có chọn kho thì lọc, không thì lấy hết
+        if (invId.HasValue)
+        {
+            query = query.Where(t => t.InvId == invId.Value);
+        }
+
+        return query
+            .GroupBy(t => t.Item)
             .Select(g => new InventoryReportViewModel
             {
                 ItemId = g.Key.ItemId,
                 ItemName = g.Key.ItemName,
                 Unit = g.Key.Unit,
-
-                // Tính tổng nhập (Type = 1)
                 TotalImport = g.Where(x => x.Type == 1).Sum(x => x.SoLuong),
-
-                // Tính tổng xuất (Type = 2)
                 TotalExport = g.Where(x => x.Type == 2).Sum(x => x.SoLuong),
-
-                // Tồn = Nhập - Xuất
                 StockQuantity = g.Where(x => x.Type == 1).Sum(x => x.SoLuong)
                               - g.Where(x => x.Type == 2).Sum(x => x.SoLuong)
-            });
-
-        return query.ToList();
+            })
+            .ToList();
     }
 
     // Thêm vào Interface trước: 

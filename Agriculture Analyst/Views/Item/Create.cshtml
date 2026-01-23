@@ -1,20 +1,21 @@
 ﻿@model Agriculture_Analyst.Models.Item
+@{
+    ViewData["Title"] = "Thêm Vật tư";
+}
 
-<h2>🧰 Thêm vật tư</h2>
-
-<form asp-action="Create" method="post" class="card p-4">
-
-    @Html.AntiForgeryToken()
-
-    <div class="mb-3">
-        <label>Tên vật tư</label>
-        <input asp-for="ItemName" class="form-control" />
-    </div>
-
-    <div class="mb-3">
-        <label>Đơn vị</label>
-        <input asp-for="Unit" class="form-control" />
-    </div>
-
-    <button class="btn btn-success">Lưu</button>
-</form>
+<div class="container mt-3 col-md-6">
+    <h3>+ Thêm Vật tư mới</h3>
+    <form asp-action="Create" class="card p-4">
+        <div class="mb-3">
+            <label>Tên vật tư</label>
+            <input asp-for="ItemName" class="form-control" required />
+            <span asp-validation-for="ItemName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Đơn vị tính (kg, lít, chai...)</label>
+            <input asp-for="Unit" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu lại</button>
+        <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>
