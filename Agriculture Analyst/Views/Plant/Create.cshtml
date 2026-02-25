@@ -2,12 +2,12 @@
 
 <form method="post">
     <div class="form-group">
-        <label>Tên cây</label>
+        <label>Tên</label>
         <input asp-for="PlantName" class="form-control" />
     </div>
 
     <div class="form-group">
-        <label>Loại cây</label>
+        <label>Giống cây</label>
         <input asp-for="PlantType" class="form-control" />
     </div>
 
@@ -23,7 +23,12 @@
 
     <div class="form-group">
         <label>Trạng thái</label>
-        <input asp-for="Status" class="form-control" />
+        <select asp-for="Status" class="form-control">
+            <option value="">-- Chọn trạng thái --</option>
+            <option value="Đang Trồng">Đang trồng</option>
+            <option value="Đã Thu Hoạch">Đã thu hoạch</option>
+            <option value="Tạm Dừng">Tạm dừng</option>
+        </select>
     </div>
 
     <button type="submit" class="btn btn-success">Lưu</button>
