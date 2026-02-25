@@ -5,7 +5,13 @@
 
 
 <h2 class="mb-3">📘 Nhật ký cây trồng</h2>
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#startGuideModal">
+    Khởi đầu
+</button>
 
+<button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#vietgapModal">
+    Thông tin VietGAP
+</button>
 <div class="diary-layout">
 
     <!-- ================= LEFT: THÔNG TIN CÂY ================= -->
@@ -25,6 +31,7 @@
                    class="form-control mt-2"
                    onchange="this.form.submit()" />
         </form>
+        
     </div>
 
     <!-- ================= RIGHT: TASK + DIARY ================= -->
@@ -102,4 +109,148 @@
         }
 
     </div>
+    @* Guide *@
+    <div class="modal fade" id="startGuideModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="guideTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <h6 id="checklistTitle"></h6>
+                    <ul id="checklist"></ul>
+
+                    <hr>
+
+                    <h6 id="tasksTitle"></h6>
+                    <ul id="tasks"></ul>
+                </div>
+
+                <div class="modal-footer">
+                    
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @* VietGap Modal *@
+    <div class="modal fade" id="vietgapModal" tabindex="-1" aria-labelledby="vietgapTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content shadow">
+
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="vietgapTitle">
+                        Tiêu chuẩn VietGAP cho khóm
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body" id="vietgapContent">
+                    <!-- Nội dung sẽ render bằng JS -->
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                        Đóng
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </div>
+<script>
+    let guidelineCache = null;
+
+    // Lấy dữ liệu JSON (cache lại)
+    async function getGuidelines() {
+        if (guidelineCache) return guidelineCache;
+
+        const res = await fetch("/data/guidelines.json");
+        if (!res.ok) throw new Error("Không load được guidelines.json");
+
+        guidelineCache = await res.json();
+        return guidelineCache;
+    }
+
+    // Render list đơn giản
+    function renderList(containerId, items) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = "";
+
+        const frag = document.createDocumentFragment();
+
+        items.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            frag.appendChild(li);
+        });
+
+        container.appendChild(frag);
+    }
+
+    // ===== Guide =====
+    async function loadStartGuide() {
+        try {
+            const data = await getGuidelines();
+
+            document.getElementById("guideTitle").textContent = data.title;
+            document.getElementById("checklistTitle").textContent = data.checklistTitle;
+            document.getElementById("tasksTitle").textContent = data.tasksTitle;
+
+            renderList("checklist", data.checklist);
+            renderList("tasks", data.tasks);
+
+        } catch (err) {
+            console.error("Guide load lỗi:", err);
+        }
+    }
+
+    // ===== VietGAP =====
+    async function loadVietGap() {
+        try {
+            const data = await getGuidelines();
+            const vietgap = data.vietgap;
+
+            document.getElementById("vietgapTitle").textContent = vietgap.title;
+
+            const container = document.getElementById("vietgapContent");
+            container.innerHTML = "";
+
+            const frag = document.createDocumentFragment();
+
+            vietgap.sections.forEach(section => {
+                const title = document.createElement("h6");
+                title.textContent = section.name;
+
+                const ul = document.createElement("ul");
+
+                section.items.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = item;
+                    ul.appendChild(li);
+                });
+
+                frag.appendChild(title);
+                frag.appendChild(ul);
+            });
+
+            container.appendChild(frag);
+
+        } catch (err) {
+            console.error("VietGAP load lỗi:", err);
+        }
+    }
+
+    // Event modal
+    document.getElementById("startGuideModal")
+        .addEventListener("show.bs.modal", loadStartGuide);
+
+    document.getElementById("vietgapModal")
+        .addEventListener("show.bs.modal", loadVietGap);
+</script>
