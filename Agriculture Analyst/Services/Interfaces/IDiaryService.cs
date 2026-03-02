@@ -10,5 +10,10 @@ namespace Agriculture_Analyst.Services.Interfaces
 
         Task CreateFromTaskAsync(
             PlantTask task);
+        Task<List<CalendarDayDto>>
+        GetCalendarAsync(int plantId, int month, int year);
+
+        Task<DiarySummaryDto>
+            GetSummaryAsync(int plantId, int month, int year);
     }
 }

@@ -10,6 +10,11 @@ namespace Agriculture_Analyst.Repositories.Interfaces
         Task<List<DiaryEntry>> GetByPlantAndDateAsync(
             int plantId,
             DateTime date);
+        Task<List<DiaryEntry>> GetByPlantAndMonthAsync(
+        int plantId,
+        int month,
+        int year);
+
     }
 
 }

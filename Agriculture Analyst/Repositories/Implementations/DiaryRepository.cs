@@ -40,6 +40,20 @@ namespace Agriculture_Analyst.Repositories.Implementations
             _context.DiaryEntries.Add(diary);
             await _context.SaveChangesAsync();
         }
+        public async Task<List<DiaryEntry>> GetByPlantAndMonthAsync(
+        int plantId,
+        int month,
+        int year)
+        {
+            return await _context.DiaryEntries
+                .Where(d =>
+                    d.PlantId == plantId &&
+                    d.EntryDate.HasValue &&
+                    d.EntryDate.Value.Month == month &&
+                    d.EntryDate.Value.Year == year)
+                .OrderBy(d => d.EntryDate)
+                .ToListAsync();
+        }
     }
 
 }
