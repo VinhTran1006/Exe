@@ -1,0 +1,146 @@
+﻿@{
+    ViewData["Title"] = "Diary Calendar";
+    var plantId = ViewBag.PlantId;
+}
+
+<link href="~/css/style/calendar.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/css/bootstrap.min.css" />
+<div class="container mt-4">
+
+    <h3>📅 Nhật ký cây trồng</h3>
+
+    <div class="d-flex gap-2 mb-3">
+        <select id="month" class="form-select w-auto"></select>
+        <select id="year" class="form-select w-auto"></select>
+
+        <button class="btn btn-success"
+                onclick="loadCalendar()">
+            Xem
+        </button>
+    </div>
+
+    <div id="calendar"></div>
+
+    <hr />
+
+    <h5>📊 Tổng hợp tháng</h5>
+    <div id="summary"></div>
+
+</div>
+@section Scripts {
+    <script>
+
+        const plantId = Number('@ViewBag.PlantId');
+
+        const calendarUrl =
+        '@Url.Action("GetCalendar", "Diary")';
+
+        const summaryUrl =
+        '@Url.Action("GetSummary", "Diary")';
+
+        initDropdown();
+        loadCalendar();
+        
+
+        function initDropdown() {
+
+            const month = document.getElementById("month");
+            const year = document.getElementById("year");
+
+            for (let i = 1; i <= 12; i++)
+                month.innerHTML += `<option value="${i}">${i}</option>`;
+
+            const now = new Date().getFullYear();
+
+            for (let i = now - 2; i <= now + 2; i++)
+                year.innerHTML += `<option value="${i}">${i}</option>`;
+
+            month.value = new Date().getMonth() + 1;
+            year.value = now;
+        }
+
+        async function loadCalendar() {
+
+            const month = document.getElementById("month").value;
+            const year = document.getElementById("year").value;
+
+            const data = await fetchJson(
+                `${calendarUrl}?plantId=${plantId}&month=${month}&year=${year}`
+            );
+
+            renderCalendar(month, year, data);
+
+            loadSummary(month, year);
+            console.log(data);
+            console.log("PlantId:", plantId);
+        }
+
+        function renderCalendar(month, year, data) {
+
+            const calendar = document.getElementById("calendar");
+
+            let firstDay = new Date(year, month - 1, 1);
+            let days = new Date(year, month, 0).getDate();
+
+            let start = firstDay.getDay();
+            start = start === 0 ? 6 : start - 1;
+
+            let html = `<div class="calendar-grid">`;
+
+            for (let i = 0; i < start; i++)
+                html += `<div></div>`;
+
+            for (let d = 1; d <= days; d++) {
+
+                let hasDiary =
+                    data.some(x => Number(x.day) === d);
+
+                html += `
+                <div class="day ${hasDiary ? "has-data" : ""}"
+                     onclick="viewDay(${d})">
+                    ${d}
+                    ${hasDiary ? '<div class="dot"></div>' : ''}
+                </div>`;
+            }
+
+            html += "</div>";
+
+            calendar.innerHTML = html;
+        }
+
+        async function loadSummary(month, year) {
+
+            const data = await fetchJson(
+                `${summaryUrl}?plantId=${plantId}&month=${month}&year=${year}`
+            );
+
+            document.getElementById("summary").innerHTML =
+                `<div class="alert alert-success">
+                    Tổng hoạt động: ${data.TotalEntries}
+                </div>`;
+        }
+
+        function viewDay(day) {
+
+            const month =
+                document.getElementById("month").value;
+
+            const year =
+                document.getElementById("year").value;
+
+            window.location =
+                `/Diary?plantId=${plantId}&day=${day}&month=${month}&year=${year}`;
+        }
+
+        async function fetchJson(url) {
+
+            const res = await fetch(url);
+
+            if (!res.ok)
+                throw new Error("API Error");
+
+            return await res.json();
+        }
+
+    </script>
+}

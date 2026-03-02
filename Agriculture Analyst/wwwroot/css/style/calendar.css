@@ -1,0 +1,30 @@
+﻿.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    border: 1px solid #ddd;
+    height: 90px;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+    .day:hover {
+        background: #eef9f1;
+    }
+
+.has-data {
+    background: #d1e7dd;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}

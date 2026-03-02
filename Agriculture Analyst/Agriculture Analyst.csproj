@@ -13,6 +13,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.22" />
     <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+	
   </ItemGroup>
 
 </Project>

@@ -53,7 +53,7 @@ namespace Agriculture_Analyst.Controllers
                 DiaryEntries = diaries,
                 SelectedDate = selectedDate
             };
-
+            
             return View(vm);
         }
 
@@ -98,6 +98,34 @@ namespace Agriculture_Analyst.Controllers
 
             await _taskService.CreateAsync(model, GetUserId());
             return RedirectToAction(nameof(Index), new { plantId = model.PlantId });
+        }
+
+        public IActionResult Calendar(int plantId)
+        {
+            ViewBag.PlantId = plantId;
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult>
+            GetCalendar(int plantId, int month, int year)
+        {
+            var data =
+                await _diaryService.GetCalendarAsync(
+                    plantId, month, year);
+
+            return Json(data);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult>
+            GetSummary(int plantId, int month, int year)
+        {
+            var data =
+                await _diaryService.GetSummaryAsync(
+                    plantId, month, year);
+
+            return Json(data);
         }
     }
 

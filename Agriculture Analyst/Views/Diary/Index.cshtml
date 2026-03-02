@@ -2,7 +2,7 @@
 @using Agriculture_Analyst.Models
 
 <link rel="stylesheet" href="~/css/style/diary.css" asp-append-version="true" />
-
+<link rel="stylesheet" href="~/css/bootstrap.min.css" />
 
 <h2 class="mb-3">📘 Nhật ký cây trồng</h2>
 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#startGuideModal">
@@ -12,6 +12,11 @@
 <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#vietgapModal">
     Thông tin VietGAP
 </button>
+<a asp-action="Calendar"
+   asp-route-plantId="@Model.Plant.PlantId"
+   class="btn btn-secondary">
+    📅 Nhật ký
+</a>
 <div class="diary-layout">
 
     <!-- ================= LEFT: THÔNG TIN CÂY ================= -->
