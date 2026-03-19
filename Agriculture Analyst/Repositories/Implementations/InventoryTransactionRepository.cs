@@ -17,14 +17,34 @@ public class InventoryTransactionRepository : IInventoryTransactionRepository
         _context.SaveChanges();
     }
 
-    public IEnumerable<InventoryTransaction> GetByUser(int userId)
+    public IEnumerable<InventoryTransaction> GetByUser(int userId, int? type = null, int? invId = null, int? itemId = null, DateTime? fromDate = null, DateTime? toDate = null)
     {
-        return _context.InventoryTransactions
+        var query = _context.InventoryTransactions
             .Include(x => x.Item)
             .Include(x => x.Inventory)
-            .Where(x => x.UserId == userId)
-            .OrderByDescending(x => x.NgayGiaoDich)
-            .ToList();
+            .Include(x => x.Plant)
+            .Where(x => x.UserId == userId);
+
+        // Áp dụng các bộ lọc nếu người dùng có chọn
+        if (type.HasValue)
+            query = query.Where(x => x.Type == type.Value);
+
+        if (invId.HasValue)
+            query = query.Where(x => x.InvId == invId.Value);
+
+        if (itemId.HasValue)
+            query = query.Where(x => x.ItemId == itemId.Value);
+
+        if (fromDate.HasValue)
+            query = query.Where(x => x.NgayGiaoDich >= fromDate.Value.Date); // Từ đầu ngày
+
+        if (toDate.HasValue)
+        {
+            var endOfDay = toDate.Value.Date.AddDays(1).AddTicks(-1); // Đến cuối ngày
+            query = query.Where(x => x.NgayGiaoDich <= endOfDay);
+        }
+
+        return query.OrderByDescending(x => x.NgayGiaoDich).ToList();
     }
     public int GetCurrentStock(int invId, int itemId)
     {

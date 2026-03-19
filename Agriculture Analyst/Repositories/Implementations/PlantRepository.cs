@@ -1,9 +1,10 @@
 ﻿namespace Agriculture_Analyst.Repositories.Implementations;
 
+using System;
 using Agriculture_Analyst.Models;
+using Agriculture_Analyst.Models.ViewModel;
 using Agriculture_Analyst.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 public class PlantRepository : IPlantRepository
 {
@@ -43,6 +44,36 @@ public class PlantRepository : IPlantRepository
     {
         _context.Plants.Remove(plant);
         await _context.SaveChangesAsync();
+    }
+
+    public PlantReportViewModel GetPlantReport(int plantId)
+    {
+        // 1. Lấy thông tin cây
+        var plant = _context.Plants.FirstOrDefault(p => p.PlantId == plantId);
+
+        if (plant == null) return null; // Không tìm thấy
+
+        // 2. Lấy vật tư đã xuất cho cây này
+        var usedMaterials = _context.InventoryTransactions
+            .Include(t => t.Item)
+            .Where(t => t.PlantId == plantId && t.Type == 2) // Type 2 là Xuất
+            .OrderBy(t => t.NgayGiaoDich)
+            .ToList();
+
+        // 3. Lấy nhật ký
+        var diaries = _context.DiaryEntries
+            .Where(d => d.PlantId == plantId)
+            .OrderBy(d => d.EntryDate)
+            .ToList();
+
+        // Đóng gói trả về ViewModel
+        return new PlantReportViewModel
+        {
+            Plant = plant,
+            UsedMaterials = usedMaterials,
+            TotalMaterialCost = usedMaterials.Sum(t => t.ThanhTien),
+            DiaryEntries = diaries
+        };
     }
 }
 

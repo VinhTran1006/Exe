@@ -17,10 +17,24 @@ public class InventoryController : Controller
         _context = context;
     }
 
-    public IActionResult Index()
+    // Cập nhật hàm Index
+    public IActionResult Index(int? type, int? invId, int? itemId, DateTime? fromDate, DateTime? toDate)
     {
         var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-        return View(_service.GetUserTransactions(userId));
+
+        // 1. Lấy dữ liệu đã lọc
+        var data = _service.GetUserTransactions(userId, type, invId, itemId, fromDate, toDate);
+
+        // 2. Chuẩn bị dữ liệu cho Dropdown
+        ViewBag.InventoryList = new SelectList(_context.Inventories.Where(x => x.UserId == userId), "InvId", "InvName", invId);
+        ViewBag.ItemList = new SelectList(_context.Items, "ItemId", "ItemName", itemId);
+
+        // 3. Giữ lại giá trị cũ để hiển thị trên Form
+        ViewBag.Type = type;
+        ViewBag.FromDate = fromDate?.ToString("yyyy-MM-dd");
+        ViewBag.ToDate = toDate?.ToString("yyyy-MM-dd");
+
+        return View(data);
     }
 
     public IActionResult Create()
