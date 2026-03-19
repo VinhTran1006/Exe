@@ -1,10 +1,11 @@
-﻿using Agriculture_Analyst.Models;
+﻿using System.Security.Claims;
+using Agriculture_Analyst.Models;
+using Agriculture_Analyst.Services.Implementations;
 using Agriculture_Analyst.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using System.Security.Claims;
 
 namespace Agriculture_Analyst.Controllers
 {
@@ -84,6 +85,19 @@ namespace Agriculture_Analyst.Controllers
             await _service.DeleteAsync(id, GetUserId());
             return RedirectToAction(nameof(Index));
         }
+
+        public IActionResult Report(int id)
+        {
+            var reportData = _service.GetPlantReport(id);
+
+            if (reportData == null)
+            {
+                return NotFound("Không tìm thấy dữ liệu vụ mùa này!");
+            }
+
+            return View(reportData);
+        }
+
     }
 
 

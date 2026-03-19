@@ -5,7 +5,7 @@ using Agriculture_Analyst.Models.ViewModel; // Nhớ using namespace chứa View
 public interface IInventoryTransactionRepository
 {
     void Add(InventoryTransaction entity);
-    IEnumerable<InventoryTransaction> GetByUser(int userId);
+    IEnumerable<InventoryTransaction> GetByUser(int userId, int? type = null, int? invId = null, int? itemId = null, DateTime? fromDate = null, DateTime? toDate = null);
     int GetCurrentStock(int invId, int itemId); // Hàm check tồn tổng
     int GetBatchRemainingQuantity(int batchId); // Hàm check tồn lô
 
