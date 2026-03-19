@@ -32,8 +32,8 @@ public partial class AgricultureAnalystDbContext : DbContext
     public virtual DbSet<Item> Items { get; set; }
     public virtual DbSet<InventoryTransaction> InventoryTransactions { get; set; }
     public DbSet<PlantTask> PlantTasks { get; set; }
+    public DbSet<Post> Posts { get; set; }
 
-   
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Aianalysis>(entity =>
@@ -184,7 +184,10 @@ public partial class AgricultureAnalystDbContext : DbContext
           .WithMany() // Bên Plant không cần List<Transaction> cũng được, hoặc bạn thêm vào nếu muốn
           .HasForeignKey(e => e.PlantId)
           .OnDelete(DeleteBehavior.SetNull);
-        });
+        }
+        
+        
+        );
 
 
 
