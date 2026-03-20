@@ -286,6 +286,7 @@
             align-items: center;
             gap: 5px;
             transition: .2s;
+            z-index: 10;
         }
 
             .btn-home-link:hover {
@@ -305,18 +306,29 @@
                 text-decoration: none;
             }
 
-        /* ── Responsive ── */
+        /* ── Responsive Dành Cho Điện Thoại ── */
         @@media (max-width:768px) {
             .auth-container {
-                min-height: 650px;
+                min-height: 700px;
                 width: 100%;
                 border-radius: 12px;
             }
 
             .form-container {
                 width: 100%;
-                padding: 30px 20px;
+                padding: 40px 20px 20px;
+                overflow-y: auto; /* ✅ FIX LỖI: Cho phép cuộn form nếu nội dung dài */
+                justify-content: flex-start; /* ✅ FIX LỖI: Bắt đầu từ trên cùng, không căn giữa nữa */
             }
+            /* ✅ FIX LỖI: Gộp cột ngang thành dọc để dễ bấm trên Mobile */
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+                .form-row .form-group {
+                    width: 100%;
+                }
 
             .overlay-container {
                 display: none;
@@ -349,12 +361,13 @@
 
             .mobile-toggle {
                 display: block;
+                margin-bottom: 30px; /* Thêm khoảng trống ở dưới cùng lúc cuộn */
             }
         }
 
         /* ════════════════════════════════════
-                   MODAL ĐIỀU KHOẢN
-                   ════════════════════════════════════ */
+                           MODAL ĐIỀU KHOẢN
+                           ════════════════════════════════════ */
         .tos-overlay {
             position: fixed;
             inset: 0;
@@ -625,7 +638,6 @@
 </head>
 <body>
 
-    
     <div class="tos-overlay" id="tosOverlay">
         <div class="tos-modal" id="tosModal">
 
@@ -646,48 +658,28 @@
             <p class="tos-scroll-hint" id="tosScrollHint">↓ Cuộn xuống để đọc toàn bộ điều khoản</p>
 
             <div class="tos-body" id="tosBody">
-
                 <div class="tos-section">
                     <p class="tos-section-title">🌿 1. Chấp nhận điều khoản</p>
-                    <p>
-                        Khi nhấn <strong>Đăng nhập</strong>, bạn xác nhận rằng mình đã đọc, hiểu và
-                        đồng ý toàn bộ với các điều khoản sử dụng dưới đây. Nếu bạn không đồng ý với
-                        bất kỳ điều khoản nào, vui lòng không tiếp tục sử dụng dịch vụ.
-                    </p>
+                    <p>Khi nhấn <strong>Đăng nhập</strong>, bạn xác nhận rằng mình đã đọc, hiểu và đồng ý toàn bộ với các điều khoản sử dụng dưới đây. Nếu bạn không đồng ý với bất kỳ điều khoản nào, vui lòng không tiếp tục sử dụng dịch vụ.</p>
                 </div>
 
                 <div class="tos-section">
                     <p class="tos-section-title">📓 2. Minh bạch trong sử dụng nhật ký</p>
-                    <p>
-                        Hệ thống nhật ký cây trồng được cung cấp nhằm hỗ trợ việc ghi chép và theo dõi
-                        quá trình canh tác. Người dùng cam kết:
-                    </p>
+                    <p>Hệ thống nhật ký cây trồng được cung cấp nhằm hỗ trợ việc ghi chép và theo dõi quá trình canh tác. Người dùng cam kết:</p>
                     <ul>
                         <li>Nhập thông tin nhật ký một cách trung thực, chính xác và có cơ sở thực tế.</li>
-                        <li>
-                            Không sử dụng hệ thống để ghi chép hoặc phát tán thông tin sai lệch, gây hiểu
-                            nhầm về tình trạng cây trồng, dịch bệnh hoặc năng suất nông nghiệp.
-                        </li>
+                        <li>Không sử dụng hệ thống để ghi chép hoặc phát tán thông tin sai lệch, gây hiểu nhầm về tình trạng cây trồng, dịch bệnh hoặc năng suất nông nghiệp.</li>
                         <li>Không chia sẻ dữ liệu nhật ký của người khác khi chưa được sự cho phép.</li>
-                        <li>
-                            Hiểu rằng dữ liệu nhật ký có thể được dùng để tạo báo cáo thống kê phục vụ
-                            cải thiện hệ thống, nhưng sẽ không bị chia sẻ ra bên ngoài dưới dạng
-                            định danh cá nhân.
-                        </li>
+                        <li>Hiểu rằng dữ liệu nhật ký có thể được dùng để tạo báo cáo thống kê phục vụ cải thiện hệ thống, nhưng sẽ không bị chia sẻ ra bên ngoài dưới dạng định danh cá nhân.</li>
                     </ul>
                     <div class="tos-highlight">
-                        🌾 <strong>Nguyên tắc minh bạch:</strong> Mọi dữ liệu nhật ký bạn tạo ra đều
-                        thuộc về bạn. Chúng tôi không chỉnh sửa, xóa hay can thiệp vào nội dung
-                        nhật ký của bạn mà không có lý do chính đáng và thông báo trước.
+                        🌾 <strong>Nguyên tắc minh bạch:</strong> Mọi dữ liệu nhật ký bạn tạo ra đều thuộc về bạn. Chúng tôi không chỉnh sửa, xóa hay can thiệp vào nội dung nhật ký của bạn mà không có lý do chính đáng và thông báo trước.
                     </div>
                 </div>
 
                 <div class="tos-section">
                     <p class="tos-section-title">⚖️ 3. Trách nhiệm kiểm soát nhật ký</p>
-                    <p>
-                        Người dùng hoàn toàn chịu trách nhiệm pháp lý và đạo đức đối với toàn bộ
-                        thông tin được nhập vào hệ thống, bao gồm nhưng không giới hạn:
-                    </p>
+                    <p>Người dùng hoàn toàn chịu trách nhiệm pháp lý và đạo đức đối với toàn bộ thông tin được nhập vào hệ thống, bao gồm nhưng không giới hạn:</p>
                     <ul>
                         <li>Nội dung mô tả hoạt động canh tác, tình trạng cây trồng, thời tiết.</li>
                         <li>Thông tin về loại phân bón, thuốc bảo vệ thực vật hoặc các hóa chất sử dụng.</li>
@@ -695,17 +687,13 @@
                         <li>Hình ảnh và tệp đính kèm được tải lên hệ thống.</li>
                     </ul>
                     <p style="margin-top:8px">
-                        Agriculture Analyst <strong>không chịu trách nhiệm</strong> về bất kỳ tổn thất
-                        nào phát sinh từ việc người dùng nhập sai, nhập thiếu hoặc cố tình nhập thông
-                        tin không chính xác vào hệ thống nhật ký.
+                        Agriculture Analyst <strong>không chịu trách nhiệm</strong> về bất kỳ tổn thất nào phát sinh từ việc người dùng nhập sai, nhập thiếu hoặc cố tình nhập thông tin không chính xác vào hệ thống nhật ký.
                     </p>
                 </div>
 
                 <div class="tos-section">
                     <p class="tos-section-title">🔒 4. Chính sách thu thập thông tin cá nhân</p>
-                    <p>
-                        Chúng tôi cam kết chỉ thu thập các thông tin cơ bản cần thiết để vận hành dịch vụ:
-                    </p>
+                    <p>Chúng tôi cam kết chỉ thu thập các thông tin cơ bản cần thiết để vận hành dịch vụ:</p>
                     <ul>
                         <li>Họ và tên đầy đủ</li>
                         <li>Địa chỉ email liên hệ</li>
@@ -715,33 +703,19 @@
                         <li>Thông tin tài khoản (tên đăng nhập, mật khẩu được mã hóa)</li>
                     </ul>
                     <div class="tos-highlight">
-                        🛡️ <strong>Cam kết không thu thập:</strong> Chúng tôi <strong>tuyệt đối không</strong>
-                        thu thập số CMND/CCCD, thông tin tài chính/ngân hàng, dữ liệu sinh trắc học,
-                        lịch sử duyệt web cá nhân, vị trí địa lý theo thời gian thực (ngoại trừ khi
-                        người dùng chủ động cho phép), hoặc bất kỳ thông tin nhạy cảm nào khác không
-                        liên quan đến dịch vụ.
+                        🛡️ <strong>Cam kết không thu thập:</strong> Chúng tôi <strong>tuyệt đối không</strong> thu thập số CMND/CCCD, thông tin tài chính/ngân hàng, dữ liệu sinh trắc học, lịch sử duyệt web cá nhân, vị trí địa lý theo thời gian thực (ngoại trừ khi người dùng chủ động cho phép), hoặc bất kỳ thông tin nhạy cảm nào khác không liên quan đến dịch vụ.
                     </div>
                 </div>
 
                 <div class="tos-section">
                     <p class="tos-section-title">🔐 5. Bảo mật & Quyền riêng tư</p>
-                    <p>
-                        Toàn bộ mật khẩu được mã hóa trước khi lưu trữ. Chúng tôi không bao giờ
-                        lưu mật khẩu dưới dạng văn bản thuần. Thông tin cá nhân của bạn sẽ không
-                        được bán, cho thuê hoặc chia sẻ với bên thứ ba vì mục đích thương mại.
-                        Bạn có quyền yêu cầu xóa tài khoản và toàn bộ dữ liệu liên quan bất cứ lúc nào.
-                    </p>
+                    <p>Toàn bộ mật khẩu được mã hóa trước khi lưu trữ. Chúng tôi không bao giờ lưu mật khẩu dưới dạng văn bản thuần. Thông tin cá nhân của bạn sẽ không được bán, cho thuê hoặc chia sẻ với bên thứ ba vì mục đích thương mại. Bạn có quyền yêu cầu xóa tài khoản và toàn bộ dữ liệu liên quan bất cứ lúc nào.</p>
                 </div>
 
                 <div class="tos-section">
                     <p class="tos-section-title">📬 6. Liên hệ & Khiếu nại</p>
-                    <p>
-                        Nếu bạn có thắc mắc về điều khoản sử dụng hoặc cách chúng tôi xử lý dữ liệu,
-                        vui lòng liên hệ qua email hỗ trợ được cung cấp trên trang chủ. Chúng tôi cam
-                        kết phản hồi trong vòng <strong>3 ngày làm việc</strong>.
-                    </p>
+                    <p>Nếu bạn có thắc mắc về điều khoản sử dụng hoặc cách chúng tôi xử lý dữ liệu, vui lòng liên hệ qua email hỗ trợ được cung cấp trên trang chủ. Chúng tôi cam kết phản hồi trong vòng <strong>3 ngày làm việc</strong>.</p>
                 </div>
-
             </div>
 
             <div class="tos-footer">
@@ -755,8 +729,7 @@
                 </div>
                 <div class="tos-btn-row">
                     <button class="tos-btn-decline" onclick="closeTos()">Hủy bỏ</button>
-                    <button class="tos-btn-accept" id="tosAcceptBtn"
-                            onclick="acceptTosAndSubmit()" disabled>
+                    <button class="tos-btn-accept" id="tosAcceptBtn" onclick="acceptTosAndSubmit()" disabled>
                         ✓ Đồng ý & Đăng nhập
                     </button>
                 </div>
@@ -764,10 +737,8 @@
         </div>
     </div>
 
-    
     <div class="auth-container" id="container">
 
-        
         <div class="form-container sign-up-container">
             <a href="/" class="btn-home-link d-md-none">← Trang chủ</a>
             <form method="post" asp-action="SignUp" asp-controller="Home" id="signupForm">
@@ -809,36 +780,28 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="Password"
-                           placeholder="Mật khẩu (Ít nhất 6 ký tự)" required>
+                    <input type="password" name="Password" placeholder="Mật khẩu (Ít nhất 6 ký tự)" required>
                     @Html.ValidationMessage("Password", new { @class = "error-message" })
                 </div>
                 <div class="form-group">
-                    <input type="password" name="ConfirmPassword"
-                           placeholder="Xác nhận mật khẩu" required>
+                    <input type="password" name="ConfirmPassword" placeholder="Xác nhận mật khẩu" required>
                     @Html.ValidationMessage("ConfirmPassword", new { @class = "error-message" })
                 </div>
 
                 <button type="submit" id="btnSignUp">Đăng ký ngay</button>
-                <p class="form-note mb-0">
-                    Bằng cách đăng ký, bạn đồng ý với Điều khoản của chúng tôi
-                </p>
+                <p class="form-note mb-0">Bằng cách đăng ký, bạn đồng ý với Điều khoản của chúng tôi</p>
                 <p class="mobile-toggle">
-                    Đã có tài khoản?
-                    <a href="#" id="mobileSignInLink">Đăng nhập</a>
+                    Đã có tài khoản? <a href="#" id="mobileSignInLink">Đăng nhập</a>
                 </p>
             </form>
         </div>
 
-        
         <div class="form-container sign-in-container">
             <a href="/" class="btn-home-link">← Trang chủ</a>
             <form method="post" asp-action="SignIn" asp-controller="Home" id="signinForm">
                 @Html.AntiForgeryToken()
                 <h1>Đăng nhập</h1>
-                <p class="text-center text-muted mb-4 d-none d-md-block">
-                    Chào mừng bạn quay lại với hệ thống quản lý
-                </p>
+                <p class="text-center text-muted mb-4 d-none d-md-block">Chào mừng bạn quay lại với hệ thống quản lý</p>
 
                 @if (ViewData["signinError"] != null)
                 {
@@ -862,23 +825,17 @@
                     @Html.ValidationMessage("Password", new { @class = "error-message" })
                 </div>
                 <div class="d-flex justify-content-end w-100 mb-3">
-                    <a href="/Home/ForgotPassword"
-                       style="color:var(--primary-color);font-size:.9rem;font-weight:600;text-decoration:none;">
-                        Quên mật khẩu?
-                    </a>
+                    <a href="/Home/ForgotPassword" style="color:var(--primary-color);font-size:.9rem;font-weight:600;text-decoration:none;">Quên mật khẩu?</a>
                 </div>
 
-                
                 <button type="button" id="btnSignIn" onclick="openTos()">Đăng nhập</button>
 
                 <p class="mobile-toggle">
-                    Chưa có tài khoản?
-                    <a href="#" id="mobileSignUpLink">Tạo tài khoản</a>
+                    Chưa có tài khoản? <a href="#" id="mobileSignUpLink">Tạo tài khoản</a>
                 </p>
             </form>
         </div>
 
-        
         <div class="overlay-container d-none d-md-block">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
@@ -913,11 +870,11 @@
 
         @if (ViewData["showSignIn"] != null || TempData["SuccessMessage"] != null || ViewData["signinError"] != null)
         {
-                <text>document.addEventListener('DOMContentLoaded', () => { showSignIn(); });</text>
+                    <text>document.addEventListener('DOMContentLoaded', () => { showSignIn(); });</text>
         }
         else if (ViewData["signupError"] != null)
         {
-                <text>document.addEventListener('DOMContentLoaded', () => { showSignUp(); });</text>
+                    <text>document.addEventListener('DOMContentLoaded', () => { showSignUp(); });</text>
         }
 
         // ── ToS Modal ─────────────────────────────────────────────
