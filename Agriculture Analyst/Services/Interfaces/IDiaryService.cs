@@ -1,4 +1,5 @@
 ﻿using Agriculture_Analyst.Models;
+using Agriculture_Analyst.Models.DTOs;
 
 namespace Agriculture_Analyst.Services.Interfaces
 {
@@ -15,5 +16,7 @@ namespace Agriculture_Analyst.Services.Interfaces
 
         Task<DiarySummaryDto>
             GetSummaryAsync(int plantId, int month, int year);
+        Task<List<CalendarDayDto>> GetCalendarDetailAsync(int plantId, int month, int year); // mới – trả đủ field
+        Task<YearHeatmapDto> GetYearHeatmapAsync(int plantId, int year);                     // mới
     }
 }

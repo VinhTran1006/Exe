@@ -193,7 +193,7 @@ namespace Agriculture_Analyst.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("SignIn", "Home"); // Bạn có thể cần sửa lại là "Index" thay vì "SignIn" nếu trang gốc là Index
+            return RedirectToAction("Index", "Home"); // Bạn có thể cần sửa lại là "Index" thay vì "SignIn" nếu trang gốc là Index
         }
 
         public IActionResult Privacy()

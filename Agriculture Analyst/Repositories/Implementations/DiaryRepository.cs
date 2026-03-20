@@ -54,6 +54,22 @@ namespace Agriculture_Analyst.Repositories.Implementations
                 .OrderBy(d => d.EntryDate)
                 .ToListAsync();
         }
+        public async Task<List<DiaryEntry>> GetByPlantAndYearAsync(
+        int plantId, int year)
+        => await _context.DiaryEntries
+            .Where(d => d.PlantId == plantId
+                     && d.EntryDate.HasValue
+                     && d.EntryDate.Value.Year == year)
+            .OrderBy(d => d.EntryDate)
+            .ToListAsync();
+
+        public async Task<List<DiaryEntry>> GetRecentAsync(
+            int plantId, int take)
+            => await _context.DiaryEntries
+                .Where(d => d.PlantId == plantId && d.EntryDate.HasValue)
+                .OrderByDescending(d => d.EntryDate)
+                .Take(take)
+                .ToListAsync();
     }
 
 }

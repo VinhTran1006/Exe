@@ -1,146 +1,581 @@
 ﻿@{
-    ViewData["Title"] = "Diary Calendar";
-    var plantId = ViewBag.PlantId;
+    ViewData["Title"] = "Nhật Ký — " + ViewBag.PlantName;
+    
 }
+@* <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"> *@
 
 <link href="~/css/style/calendar.css" rel="stylesheet" />
 <link rel="stylesheet" href="~/css/bootstrap.min.css" />
-<div class="container mt-4">
+<div class="agri-bg">
 
-    <h3>📅 Nhật ký cây trồng</h3>
-
-    <div class="d-flex gap-2 mb-3">
-        <select id="month" class="form-select w-auto"></select>
-        <select id="year" class="form-select w-auto"></select>
-
-        <button class="btn btn-success"
-                onclick="loadCalendar()">
-            Xem
-        </button>
+    
+    <div class="cal-header">
+        <div class="cal-header-inner">
+            <div class="cal-title-block">
+                <span class="cal-leaf-icon">🌿</span>
+                <div>
+                    <h2 class="cal-title">Nhật Ký Cây Trồng</h2>
+                    <p class="cal-subtitle">
+                        <strong>@ViewBag.PlantName</strong>
+                        @if (!string.IsNullOrEmpty(ViewBag.PlantType as string))
+                        {
+                            <span>· @ViewBag.PlantType</span>
+                        }
+                        · Bắt đầu: @ViewBag.StartDate
+                    </p>
+                </div>
+            </div>
+            <div class="cal-controls">
+                <div class="select-group">
+                    <label class="select-label">Tháng</label>
+                    <select id="month" class="agri-select"></select>
+                </div>
+                <div class="select-group">
+                    <label class="select-label">Năm</label>
+                    <select id="year" class="agri-select"></select>
+                </div>
+                <button class="btn-view" onclick="loadCalendar()">
+                    <span>Xem lịch</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
 
-    <div id="calendar"></div>
+    <div class="cal-body">
 
-    <hr />
+        
+        <div class="stats-row" id="statsRow">
+            <div class="stat-card" id="sc0">
+                <div class="stat-icon">📋</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="sv0">--</span>
+                    <span class="stat-label">Tổng hoạt động</span>
+                </div>
+            </div>
+            <div class="stat-card" id="sc1">
+                <div class="stat-icon">📅</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="sv1">--</span>
+                    <span class="stat-label">Ngày có ghi chú</span>
+                </div>
+            </div>
+            <div class="stat-card" id="sc2">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="sv2">--</span>
+                    <span class="stat-label">Chuỗi ngày liên tiếp</span>
+                </div>
+            </div>
+            <div class="stat-card" id="sc3">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="sv3">--</span>
+                    <span class="stat-label">Chuỗi dài nhất</span>
+                </div>
+            </div>
+            <div class="stat-card" id="sc4">
+                <div class="stat-icon">🌱</div>
+                <div class="stat-info">
+                    <span class="stat-value stat-sm" id="sv4">--</span>
+                    <span class="stat-label">Hoạt động chính</span>
+                </div>
+            </div>
+            <div class="stat-card" id="sc5">
+                <div class="stat-icon">⛅</div>
+                <div class="stat-info">
+                    <span class="stat-value stat-sm" id="sv5">--</span>
+                    <span class="stat-label">Thời tiết thường gặp</span>
+                </div>
+            </div>
+        </div>
 
-    <h5>📊 Tổng hợp tháng</h5>
-    <div id="summary"></div>
+        
+        <div class="main-row">
 
+            
+            <div class="col-calendar">
+                <div class="cal-section">
+                    <div class="cal-section-top">
+                        <div class="cal-nav">
+                            <button class="nav-btn" onclick="shiftMonth(-1)">&#8592;</button>
+                            <h3 class="cal-month-label" id="calMonthLabel">--</h3>
+                            <button class="nav-btn" onclick="shiftMonth(1)">&#8594;</button>
+                        </div>
+                        
+                        <div class="filter-row" id="filterRow" style="display:none">
+                            <span class="filter-label">Lọc:</span>
+                            <div id="filterTags" class="filter-tags"></div>
+                            <button class="filter-clear" onclick="clearFilter()">Tất cả</button>
+                        </div>
+                    </div>
+                    <div class="weekdays">
+                        <span>T2</span><span>T3</span><span>T4</span><span>T5</span>
+                        <span>T6</span><span class="wd-weekend">T7</span><span class="wd-weekend">CN</span>
+                    </div>
+                    <div id="calendar" class="calendar-grid-wrap"></div>
+                    <div class="cal-legend">
+                        <span class="legend-item"><span class="legend-dot dot-has"></span>Có nhật ký</span>
+                        <span class="legend-item"><span class="legend-dot dot-today"></span>Hôm nay</span>
+                        <span class="legend-item"><span class="legend-dot dot-none"></span>Chưa ghi</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-charts">
+
+                
+                <div class="chart-card">
+                    <h4 class="chart-title">📊 Hoạt động theo tuần</h4>
+                    <div class="bar-chart" id="weeklyChart">
+                        <div class="chart-empty">Chưa có dữ liệu</div>
+                    </div>
+                </div>
+
+                
+                <div class="chart-card">
+                    <h4 class="chart-title">🌾 Phân loại hoạt động</h4>
+                    <div id="activityBreakdown">
+                        <div class="chart-empty">Chưa có dữ liệu</div>
+                    </div>
+                </div>
+
+                
+                <div class="chart-card">
+                    <h4 class="chart-title">🌤️ Thời tiết trong tháng</h4>
+                    <div id="weatherBreakdown">
+                        <div class="chart-empty">Chưa có dữ liệu</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="heatmap-section">
+            <h4 class="section-title">🗓️ Heatmap hoạt động năm <span id="heatmapYear"></span></h4>
+            <div id="yearHeatmap" class="heatmap-wrap"></div>
+        </div>
+
+        
+        <div class="timeline-section" id="timelineSection">
+            <div class="timeline-header">
+                <h4 class="section-title">📝 Nhật ký trong tháng</h4>
+                <span class="tl-count" id="tlCount"></span>
+            </div>
+            <div id="timelineList" class="timeline-list"></div>
+        </div>
+
+    </div>
 </div>
+
+
+<div class="popup-overlay" id="popupOverlay" onclick="closePopup()"></div>
+
+
+<div class="day-popup" id="dayPopup">
+    <div class="popup-header">
+        <div>
+            <span class="popup-date" id="popupDate"></span>
+            <span class="popup-badge" id="popupBadge"></span>
+        </div>
+        <button class="popup-close" onclick="closePopup()">✕</button>
+    </div>
+    <div class="popup-body" id="popupBody"></div>
+    <div class="popup-footer">
+        <button class="btn-add-entry" id="btnAddEntry">＋ Thêm nhật ký</button>
+        <button class="btn-goto" id="btnGotoDay">📖 Xem chi tiết</button>
+    </div>
+</div>
+
 @section Scripts {
     <script>
+        // ─── Config ───────────────────────────────────────────────────
+        const plantId     = Number('@ViewBag.PlantId');
+        const calendarUrl = '@Url.Action("GetCalendar", "Diary")';
+        const summaryUrl  = '@Url.Action("GetSummary", "Diary")';
+        const heatmapUrl  = '@Url.Action("GetYearHeatmap", "Diary")';
 
-        const plantId = Number('@ViewBag.PlantId');
+        // ─── State ────────────────────────────────────────────────────
+        let currentMonth, currentYear;
+        let calendarData  = [];
+        let summaryData   = {};
+        let activeFilter  = null;
 
-        const calendarUrl =
-        '@Url.Action("GetCalendar", "Diary")';
+        const MONTH_NAMES = ['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6',
+                             'Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
 
-        const summaryUrl =
-        '@Url.Action("GetSummary", "Diary")';
-
+        // ─── Init ─────────────────────────────────────────────────────
         initDropdown();
         loadCalendar();
-        
 
         function initDropdown() {
-
-            const month = document.getElementById("month");
-            const year = document.getElementById("year");
-
-            for (let i = 1; i <= 12; i++)
-                month.innerHTML += `<option value="${i}">${i}</option>`;
-
-            const now = new Date().getFullYear();
-
-            for (let i = now - 2; i <= now + 2; i++)
-                year.innerHTML += `<option value="${i}">${i}</option>`;
-
-            month.value = new Date().getMonth() + 1;
-            year.value = now;
+            const mSel = document.getElementById('month');
+            const ySel = document.getElementById('year');
+            MONTH_NAMES.forEach((n, i) =>
+                mSel.innerHTML += `<option value="${i+1}">${n}</option>`);
+            const now = new Date();
+            for (let y = now.getFullYear()-2; y <= now.getFullYear()+2; y++)
+                ySel.innerHTML += `<option value="${y}">${y}</option>`;
+            currentMonth = now.getMonth() + 1;
+            currentYear  = now.getFullYear();
+            mSel.value = currentMonth;
+            ySel.value = currentYear;
         }
 
+        // ─── Load Calendar ────────────────────────────────────────────
         async function loadCalendar() {
-
-            const month = document.getElementById("month").value;
-            const year = document.getElementById("year").value;
-
-            const data = await fetchJson(
-                `${calendarUrl}?plantId=${plantId}&month=${month}&year=${year}`
-            );
-
-            renderCalendar(month, year, data);
-
-            loadSummary(month, year);
-            console.log(data);
-            console.log("PlantId:", plantId);
+            currentMonth = +document.getElementById('month').value;
+            currentYear  = +document.getElementById('year').value;
+            try {
+                [calendarData, summaryData] = await Promise.all([
+                    fetchJson(`${calendarUrl}?plantId=${plantId}&month=${currentMonth}&year=${currentYear}`),
+                    fetchJson(`${summaryUrl}?plantId=${plantId}&month=${currentMonth}&year=${currentYear}`)
+                ]);
+                activeFilter = null;
+                renderCalendar();
+                renderStats();
+                renderWeeklyChart();
+                renderActivityBreakdown();
+                renderWeatherBreakdown();
+                renderTimeline();
+                renderFilterTags();
+                loadHeatmap();
+            } catch(e) { console.error(e); }
         }
 
-        function renderCalendar(month, year, data) {
+        // ─── Render Calendar ──────────────────────────────────────────
+        function renderCalendar() {
+            document.getElementById('calMonthLabel').textContent =
+                `${MONTH_NAMES[currentMonth-1]} — ${currentYear}`;
 
-            const calendar = document.getElementById("calendar");
-
-            let firstDay = new Date(year, month - 1, 1);
-            let days = new Date(year, month, 0).getDate();
-
-            let start = firstDay.getDay();
+            const firstDay  = new Date(currentYear, currentMonth-1, 1);
+            const totalDays = new Date(currentYear, currentMonth, 0).getDate();
+            let   start     = firstDay.getDay();
             start = start === 0 ? 6 : start - 1;
 
-            let html = `<div class="calendar-grid">`;
+            const today    = new Date();
+            const isThisMonth = today.getMonth()+1 === currentMonth && today.getFullYear() === currentYear;
+            const activeSet = new Set(calendarData.map(x => Number(x.day)));
 
-            for (let i = 0; i < start; i++)
-                html += `<div></div>`;
+            // Filter
+            const filtered = activeFilter
+                ? calendarData.filter(x => x.activity === activeFilter)
+                : calendarData;
+            const filteredSet = new Set(filtered.map(x => Number(x.day)));
 
-            for (let d = 1; d <= days; d++) {
+            let html = '';
+            for (let i = 0; i < start; i++) html += `<div class="cal-day empty"></div>`;
+            for (let d = 1; d <= totalDays; d++) {
+                const hasDiary   = activeSet.has(d);
+                const inFilter   = filteredSet.has(d);
+                const isToday    = isThisMonth && today.getDate() === d;
+                const isPast     = new Date(currentYear, currentMonth-1, d) < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+                const dayEntries = calendarData.filter(x => Number(x.day) === d);
 
-                let hasDiary =
-                    data.some(x => Number(x.day) === d);
+                let cls = 'cal-day';
+                if (hasDiary && inFilter) cls += ' has-data';
+                if (hasDiary && !inFilter && activeFilter) cls += ' dimmed';
+                if (isToday)  cls += ' today';
+                if (!hasDiary && isPast && !isToday) cls += ' past-empty';
+
+                const dotCount = Math.min(dayEntries.length, 4);
+                let dots = '';
+                for (let k = 0; k < dotCount; k++) {
+                    const act = dayEntries[k]?.activity ?? '';
+                    dots += `<span class="dot" style="background:${actColor(act)}"></span>`;
+                }
 
                 html += `
-                <div class="day ${hasDiary ? "has-data" : ""}"
-                     onclick="viewDay(${d})">
-                    ${d}
-                    ${hasDiary ? '<div class="dot"></div>' : ''}
+                <div class="${cls}" onclick="openPopup(${d})">
+                    <span class="day-num">${d}</span>
+                    ${isToday ? `<span class="today-ring"></span>` : ''}
+                    ${hasDiary ? `<div class="dots-row">${dots}</div>` : ''}
+                    ${hasDiary ? `<span class="entry-count">${dayEntries.length}</span>` : ''}
                 </div>`;
             }
-
-            html += "</div>";
-
-            calendar.innerHTML = html;
+            document.getElementById('calendar').innerHTML = html;
         }
 
-        async function loadSummary(month, year) {
+        // ─── Render Stats ─────────────────────────────────────────────
+        function renderStats() {
+            const s = summaryData;
+            const vals = [
+                s.totalEntries   ?? 0,
+                s.activeDays     ?? 0,
+                s.currentStreak  ?? 0,
+                s.longestStreak  ?? 0,
+                s.mostCommonActivity ?? '--',
+                s.mostCommonWeather  ? (weatherIcon(s.mostCommonWeather) + ' ' + s.mostCommonWeather) : '--'
+            ];
+            vals.forEach((v, i) => {
+                const el = document.getElementById(`sv${i}`);
+                if (el) { el.textContent = v; }
+            });
+            // Animate
+            document.querySelectorAll('.stat-card').forEach((c, i) => {
+                c.style.transitionDelay = `${i * 0.07}s`;
+                c.classList.remove('stat-visible');
+                requestAnimationFrame(() => c.classList.add('stat-visible'));
+            });
+        }
 
-            const data = await fetchJson(
-                `${summaryUrl}?plantId=${plantId}&month=${month}&year=${year}`
-            );
+        // ─── Render Weekly Bar Chart ──────────────────────────────────
+        function renderWeeklyChart() {
+            const container = document.getElementById('weeklyChart');
+            const weeks = summaryData.weeklyActivity ?? [];
+            if (!weeks.length) {
+                container.innerHTML = '<div class="chart-empty">Chưa có dữ liệu</div>'; return;
+            }
+            const max = Math.max(...weeks.map(w => w.count), 1);
+            container.innerHTML = `
+            <div class="bar-wrap">
+                ${weeks.map(w => `
+                <div class="bar-col">
+                    <span class="bar-val">${w.count}</span>
+                    <div class="bar-bar" style="height:${Math.max(w.count/max*100,4)}%"
+                         title="Tuần ${w.week}: ${w.count} hoạt động"></div>
+                    <span class="bar-lbl">${w.label}</span>
+                </div>`).join('')}
+            </div>`;
+        }
 
-            document.getElementById("summary").innerHTML =
-                `<div class="alert alert-success">
-                    Tổng hoạt động: ${data.TotalEntries}
+        // ─── Render Activity Breakdown ────────────────────────────────
+        function renderActivityBreakdown() {
+            const container = document.getElementById('activityBreakdown');
+            const acts = summaryData.activityBreakdown ?? [];
+            if (!acts.length) {
+                container.innerHTML = '<div class="chart-empty">Chưa có dữ liệu</div>'; return;
+            }
+            container.innerHTML = acts.map(a => `
+            <div class="breakdown-row">
+                <span class="breakdown-name" title="${a.activity}">${a.activity}</span>
+                <div class="breakdown-bar-bg">
+                    <div class="breakdown-bar-fill"
+                         style="width:${a.percent}%;background:${actColor(a.activity)}"></div>
+                </div>
+                <span class="breakdown-pct">${a.percent}%</span>
+                <span class="breakdown-cnt">${a.count}</span>
+            </div>`).join('');
+        }
+
+        // ─── Render Weather Breakdown ─────────────────────────────────
+        function renderWeatherBreakdown() {
+            const container = document.getElementById('weatherBreakdown');
+            const weathers  = summaryData.weatherStats ?? [];
+            if (!weathers.length) {
+                container.innerHTML = '<div class="chart-empty">Chưa có dữ liệu</div>'; return;
+            }
+            const total = weathers.reduce((s, w) => s + w.count, 0);
+            container.innerHTML = `
+            <div class="weather-chips">
+                ${weathers.map(w => `
+                <div class="weather-chip">
+                    <span class="wc-icon">${weatherIcon(w.weather)}</span>
+                    <span class="wc-name">${w.weather}</span>
+                    <span class="wc-count">${w.count} ngày</span>
+                    <span class="wc-pct">${Math.round(w.count/total*100)}%</span>
+                </div>`).join('')}
+            </div>`;
+        }
+
+        // ─── Render Timeline ──────────────────────────────────────────
+        function renderTimeline() {
+            const sec  = document.getElementById('timelineSection');
+            const list = document.getElementById('timelineList');
+            if (!calendarData.length) {
+                list.innerHTML = `<div class="tl-empty">
+                    <span>🌾</span><p>Chưa có nhật ký trong tháng này.</p></div>`;
+                document.getElementById('tlCount').textContent = '';
+                return;
+            }
+            document.getElementById('tlCount').textContent = `${calendarData.length} mục`;
+
+            const byDay = {};
+            calendarData.forEach(x => {
+                if (!byDay[x.day]) byDay[x.day] = [];
+                byDay[x.day].push(x);
+            });
+
+            list.innerHTML = Object.keys(byDay).sort((a,b)=>+a-+b).map(day => {
+                const entries = byDay[day];
+                const items   = entries.map(e => `
+                <div class="tl-item">
+                    <span class="tl-act-dot" style="background:${actColor(e.activity??'')}"></span>
+                    <div class="tl-item-body">
+                        ${e.activity ? `<span class="tl-act">${e.activity}</span>` : ''}
+                        ${e.weather  ? `<span class="tl-weather">${weatherIcon(e.weather)} ${e.weather}</span>` : ''}
+                        ${e.description ? `<p class="tl-desc">${e.description}</p>` : ''}
+                    </div>
+                </div>`).join('');
+                return `
+                <div class="tl-day">
+                    <div class="tl-day-head">
+                        <span class="tl-day-num">Ngày ${day}</span>
+                        <span class="tl-day-count">${entries.length} mục</span>
+                    </div>
+                    <div class="tl-entries">${items}</div>
                 </div>`;
+            }).join('');
+        }
+
+        // ─── Render Filter Tags ───────────────────────────────────────
+        function renderFilterTags() {
+            const acts = summaryData.activityBreakdown ?? [];
+            const row  = document.getElementById('filterRow');
+            const tags = document.getElementById('filterTags');
+            if (!acts.length) { row.style.display = 'none'; return; }
+            row.style.display = 'flex';
+            tags.innerHTML = acts.map(a => `
+            <button class="filter-tag ${activeFilter===a.activity?'active':''}"
+                    onclick="setFilter('${a.activity}')"
+                    style="--tag-color:${actColor(a.activity)}">
+                ${a.activity}
+            </button>`).join('');
+        }
+
+        function setFilter(act) {
+            activeFilter = activeFilter === act ? null : act;
+            renderCalendar();
+            renderFilterTags();
+        }
+        function clearFilter() { activeFilter = null; renderCalendar(); renderFilterTags(); }
+
+        // ─── Heatmap ──────────────────────────────────────────────────
+        async function loadHeatmap() {
+            document.getElementById('heatmapYear').textContent = currentYear;
+            try {
+                const data = await fetchJson(
+                    `${heatmapUrl}?plantId=${plantId}&year=${currentYear}`);
+                renderHeatmap(data.days ?? [], currentYear);
+            } catch(e) { console.error(e); }
+        }
+
+        function renderHeatmap(days, year) {
+            const container = document.getElementById('yearHeatmap');
+            const countMap  = {};
+            days.forEach(d => countMap[d.date] = d.count);
+            const maxCount  = Math.max(...Object.values(countMap), 1);
+
+            const shortMonths = ['T1','T2','T3','T4','T5','T6','T7','T8','T9','T10','T11','T12'];
+            let html = `<div class="hm-inner"><div class="hm-months">`;
+            html += shortMonths.map(m => `<span>${m}</span>`).join('');
+            html += `</div><div class="hm-grid">`;
+
+            const start = new Date(year, 0, 1);
+            let startDow = start.getDay(); // 0=Sun
+            startDow = startDow === 0 ? 6 : startDow - 1; // Mon=0
+
+            for (let i = 0; i < startDow; i++)
+                html += `<div class="hm-cell empty"></div>`;
+
+            for (let m = 0; m < 12; m++) {
+                const daysInM = new Date(year, m+1, 0).getDate();
+                for (let d = 1; d <= daysInM; d++) {
+                    const dateStr = `${year}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+                    const cnt     = countMap[dateStr] ?? 0;
+                    const level   = cnt === 0 ? 0 : Math.ceil(cnt / maxCount * 4);
+                    html += `<div class="hm-cell lv${level}" title="${dateStr}: ${cnt} hoạt động"></div>`;
+                }
+            }
+            html += `</div></div>`;
+            container.innerHTML = html;
+        }
+
+        // ─── Popup ────────────────────────────────────────────────────
+        function openPopup(day) {
+            const entries = calendarData.filter(x => Number(x.day) === day);
+            document.getElementById('popupDate').textContent =
+                `Ngày ${day} — ${MONTH_NAMES[currentMonth-1]} ${currentYear}`;
+
+            const badge = document.getElementById('popupBadge');
+            badge.textContent = entries.length > 0
+                ? `${entries.length} hoạt động` : 'Chưa có ghi chú';
+            badge.className = 'popup-badge ' + (entries.length > 0 ? 'badge-active' : 'badge-empty');
+
+            const body = document.getElementById('popupBody');
+            if (!entries.length) {
+                body.innerHTML = `
+                <div class="popup-empty">
+                    <span class="popup-empty-icon">🌾</span>
+                    <p>Chưa có nhật ký cho ngày này.</p>
+                </div>`;
+            } else {
+                body.innerHTML = entries.map((e, i) => `
+                <div class="popup-entry" style="animation-delay:${i*0.06}s">
+                    <div class="popup-entry-header">
+                        ${e.activity ? `<span class="popup-act-tag"
+                            style="background:${actColor(e.activity)}20;color:${actColor(e.activity)}">
+                            ${e.activity}</span>` : ''}
+                        ${e.weather  ? `<span class="popup-weather-tag">
+                            ${weatherIcon(e.weather)} ${e.weather}</span>` : ''}
+                    </div>
+                    ${e.description
+                        ? `<p class="popup-desc">${e.description}</p>` : ''}
+                </div>`).join('');
+            }
+
+            document.getElementById('btnGotoDay').onclick  = () => viewDay(day);
+            document.getElementById('btnAddEntry').onclick = () => viewDay(day);
+
+            document.getElementById('popupOverlay').classList.add('active');
+            document.getElementById('dayPopup').classList.add('active');
+        }
+
+        function closePopup() {
+            document.getElementById('popupOverlay').classList.remove('active');
+            document.getElementById('dayPopup').classList.remove('active');
+        }
+
+        // ─── Helpers ──────────────────────────────────────────────────
+        function shiftMonth(delta) {
+            let m = +document.getElementById('month').value + delta;
+            let y = +document.getElementById('year').value;
+            if (m < 1)  { m = 12; y--; }
+            if (m > 12) { m = 1;  y++; }
+            document.getElementById('month').value = m;
+            document.getElementById('year').value  = y;
+            loadCalendar();
         }
 
         function viewDay(day) {
-
-            const month =
-                document.getElementById("month").value;
-
-            const year =
-                document.getElementById("year").value;
-
-            window.location =
-                `/Diary?plantId=${plantId}&day=${day}&month=${month}&year=${year}`;
+            window.location = `/Diary?plantId=${plantId}&day=${day}&month=${currentMonth}&year=${currentYear}`;
         }
 
         async function fetchJson(url) {
-
             const res = await fetch(url);
-
-            if (!res.ok)
-                throw new Error("API Error");
-
-            return await res.json();
+            if (!res.ok) throw new Error('API Error: ' + url);
+            return res.json();
         }
 
+        function weatherIcon(w) {
+            if (!w) return '';
+            const s = w.toLowerCase();
+            if (s.includes('mưa'))   return '🌧️';
+            if (s.includes('nắng'))  return '☀️';
+            if (s.includes('mây'))   return '⛅';
+            if (s.includes('bão'))   return '🌪️';
+            if (s.includes('sương')) return '🌫️';
+            if (s.includes('lạnh'))  return '🥶';
+            if (s.includes('nóng'))  return '🌡️';
+            return '🌤️';
+        }
+
+        // Màu theo tên hoạt động (hash ổn định)
+        function actColor(act) {
+            const palette = [
+                '#2d6a4f','#52b788','#b7490a','#e07b39',
+                '#1565c0','#0288d1','#6a1b9a','#c2185b',
+                '#00695c','#827717'
+            ];
+            if (!act) return palette[0];
+            let hash = 0;
+            for (let i = 0; i < act.length; i++) hash += act.charCodeAt(i);
+            return palette[hash % palette.length];
+        }
     </script>
 }
