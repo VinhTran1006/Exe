@@ -17,7 +17,7 @@
             --primary-light: #2ecc71;
             --text-dark: #2c3e50;
             --text-muted: #7f8c8d;
-            --bg-color: #f0fdf4; /* Xanh lá siêu nhạt */
+            --bg-color: #f0fdf4;
         }
 
         * {
@@ -36,11 +36,11 @@
             padding: 20px;
         }
 
-        /* --- CONTAINER CHÍNH --- */
+        /* ── Auth Container ── */
         .auth-container {
             background-color: #fff;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             position: relative;
             overflow: hidden;
             width: 900px;
@@ -59,14 +59,12 @@
             justify-content: center;
         }
 
-        /* Form Đăng nhập */
         .sign-in-container {
             left: 0;
             width: 50%;
             z-index: 2;
         }
 
-        /* Form Đăng ký */
         .sign-up-container {
             left: 0;
             width: 50%;
@@ -74,7 +72,6 @@
             z-index: 1;
         }
 
-        /* --- HIỆU ỨNG TRƯỢT (ACTIVE) --- */
         .auth-container.right-panel-active .sign-in-container {
             transform: translateX(100%);
             opacity: 0;
@@ -99,7 +96,7 @@
             }
         }
 
-        /* --- OVERLAY (Mảng xanh che phủ) --- */
+        /* ── Overlay ── */
         .overlay-container {
             position: absolute;
             top: 0;
@@ -117,9 +114,7 @@
 
         .overlay {
             background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
-            background-size: cover;
-            background-position: 0 0;
-            color: #ffffff;
+            color: #fff;
             position: relative;
             left: -100%;
             height: 100%;
@@ -143,7 +138,6 @@
             top: 0;
             height: 100%;
             width: 50%;
-            transform: translateX(0);
             transition: transform 0.6s ease-in-out;
         }
 
@@ -164,7 +158,7 @@
             transform: translateX(20%);
         }
 
-        /* --- STYLING NỘI DUNG --- */
+        /* ── Typography & Form ── */
         h1 {
             font-weight: 800;
             margin-bottom: 20px;
@@ -180,7 +174,7 @@
             font-size: 1.1rem;
             font-weight: 300;
             line-height: 1.6;
-            letter-spacing: 0.5px;
+            letter-spacing: .5px;
             margin: 20px 0 30px;
         }
 
@@ -212,44 +206,44 @@
             border-radius: 8px;
             width: 100%;
             outline: none;
-            transition: all 0.3s;
-            font-size: 0.95rem;
+            transition: all .3s;
+            font-size: .95rem;
         }
 
             input:focus, select:focus {
                 border-color: var(--primary-light);
                 background-color: #fff;
-                box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+                box-shadow: 0 0 0 3px rgba(46,204,113,.1);
             }
 
         button {
             border-radius: 8px;
             border: none;
             background: var(--primary-color);
-            color: #ffffff;
+            color: #fff;
             font-size: 1rem;
             font-weight: bold;
             padding: 12px 45px;
             letter-spacing: 1px;
             text-transform: uppercase;
-            transition: transform 0.1s ease-in, box-shadow 0.3s;
+            transition: transform .1s ease-in, box-shadow .3s;
             cursor: pointer;
             margin-top: 10px;
             width: 100%;
         }
 
             button:hover {
-                box-shadow: 0 8px 15px rgba(39, 174, 96, 0.3);
+                box-shadow: 0 8px 15px rgba(39,174,96,.3);
                 background: #219a52;
             }
 
             button:active {
-                transform: scale(0.98);
+                transform: scale(.98);
             }
 
             button.ghost {
                 background-color: transparent;
-                border: 2px solid #ffffff;
+                border: 2px solid #fff;
                 box-shadow: none;
                 width: auto;
             }
@@ -261,13 +255,13 @@
 
         .error-message {
             color: #e74c3c;
-            font-size: 0.8rem;
+            font-size: .8rem;
             margin-top: 5px;
             display: block;
         }
 
         .form-note {
-            font-size: 0.85rem;
+            font-size: .85rem;
             color: var(--text-muted);
             text-align: center;
             margin-top: 15px;
@@ -278,7 +272,7 @@
             margin: 15px 0;
             color: #cbd5e1;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: .9rem;
         }
 
         .btn-home-link {
@@ -291,7 +285,7 @@
             display: flex;
             align-items: center;
             gap: 5px;
-            transition: 0.2s;
+            transition: .2s;
         }
 
             .btn-home-link:hover {
@@ -311,8 +305,8 @@
                 text-decoration: none;
             }
 
-        /* --- RESPONSIVE CHO ĐIỆN THOẠI --- */
-        @@media (max-width: 768px) {
+        /* ── Responsive ── */
+        @@media (max-width:768px) {
             .auth-container {
                 min-height: 650px;
                 width: 100%;
@@ -323,11 +317,11 @@
                 width: 100%;
                 padding: 30px 20px;
             }
-            /* Ẩn tấm mảng che (overlay) trên Mobile vì nó chiếm chỗ */
+
             .overlay-container {
                 display: none;
             }
-            /* Logic chuyển đổi ẩn hiện cho Mobile */
+
             .sign-in-container {
                 opacity: 1;
                 transform: translateX(0);
@@ -356,23 +350,435 @@
             .mobile-toggle {
                 display: block;
             }
-            /* Hiện nút chuyển đổi trên mobile */
         }
+
+        /* ════════════════════════════════════
+                   MODAL ĐIỀU KHOẢN
+                   ════════════════════════════════════ */
+        .tos-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 25, 15, 0.55);
+            backdrop-filter: blur(4px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .28s;
+        }
+
+            .tos-overlay.open {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+        .tos-modal {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 28px 72px rgba(0,0,0,.22);
+            width: 580px;
+            max-width: calc(100vw - 28px);
+            max-height: 88vh;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(18px) scale(.96);
+            transition: transform .28s cubic-bezier(.34,1.46,.64,1);
+            overflow: hidden;
+        }
+
+        .tos-overlay.open .tos-modal {
+            transform: translateY(0) scale(1);
+        }
+
+        /* Header */
+        .tos-header {
+            background: linear-gradient(135deg, #1a3a2a, #2d6a4f);
+            padding: 22px 26px 18px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .tos-header-text {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .tos-icon {
+            font-size: 1.9rem;
+        }
+
+        .tos-title {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .tos-sub {
+            color: #b7e4c7;
+            font-size: .78rem;
+            margin: 2px 0 0;
+        }
+
+        .tos-close-btn {
+            background: rgba(255,255,255,.14);
+            border: none;
+            color: rgba(255,255,255,.8);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: .88rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background .15s;
+            flex-shrink: 0;
+        }
+
+            .tos-close-btn:hover {
+                background: rgba(255,255,255,.28);
+                color: #fff;
+            }
+
+        /* Body */
+        .tos-body {
+            padding: 22px 26px;
+            overflow-y: auto;
+            flex: 1;
+            scroll-behavior: smooth;
+        }
+
+        .tos-section {
+            margin-bottom: 20px;
+        }
+
+        .tos-section-title {
+            font-size: .82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .6px;
+            color: #2d6a4f;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+            .tos-section-title::after {
+                content: '';
+                flex: 1;
+                height: 1px;
+                background: #e9f5ee;
+            }
+
+        .tos-section p {
+            font-size: .84rem;
+            color: #4a6358;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .tos-section ul {
+            margin: 8px 0 0 16px;
+            padding: 0;
+            font-size: .84rem;
+            color: #4a6358;
+            line-height: 1.7;
+        }
+
+        .tos-highlight {
+            background: #e9f5ee;
+            border-left: 4px solid #52b788;
+            border-radius: 0 8px 8px 0;
+            padding: 10px 14px;
+            font-size: .82rem;
+            color: #1a3a2a;
+            margin-top: 10px;
+        }
+
+        /* Progress bar kéo xuống */
+        .tos-scroll-bar {
+            height: 3px;
+            background: #e9f5ee;
+            flex-shrink: 0;
+        }
+
+        .tos-scroll-fill {
+            height: 100%;
+            background: linear-gradient(90deg,#52b788,#2d6a4f);
+            width: 0%;
+            transition: width .1s linear;
+            border-radius: 0 2px 2px 0;
+        }
+
+        .tos-scroll-hint {
+            text-align: center;
+            font-size: .72rem;
+            color: #8aaa96;
+            padding: 5px 0 0;
+            flex-shrink: 0;
+            transition: opacity .3s;
+        }
+
+        /* Footer */
+        .tos-footer {
+            padding: 16px 26px 20px;
+            border-top: 1px solid #f0e8d8;
+            flex-shrink: 0;
+        }
+
+        .tos-checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+            .tos-checkbox-row input[type="checkbox"] {
+                width: 18px;
+                height: 18px;
+                min-width: 18px;
+                accent-color: #27ae60;
+                margin-top: 1px;
+                cursor: pointer;
+                background: none;
+                border: none;
+                padding: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .tos-checkbox-row label {
+                font-size: .83rem;
+                color: #4a6358;
+                line-height: 1.5;
+                cursor: pointer;
+            }
+
+                .tos-checkbox-row label strong {
+                    color: #1a3a2a;
+                }
+
+        .tos-btn-row {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .tos-btn-decline {
+            background: transparent;
+            color: #8aaa96;
+            border: 1.5px solid #d5e8dd;
+            padding: 9px 20px;
+            border-radius: 8px;
+            font-size: .85rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: auto;
+            margin-top: 0;
+            text-transform: none;
+            letter-spacing: 0;
+            transition: background .15s, color .15s;
+        }
+
+            .tos-btn-decline:hover {
+                background: #f4f6f9;
+                color: #4a6358;
+                box-shadow: none;
+            }
+
+        .tos-btn-accept {
+            background: linear-gradient(135deg, #2d6a4f, #1a3a2a);
+            color: #fff;
+            padding: 9px 24px;
+            border-radius: 8px;
+            font-size: .85rem;
+            font-weight: 700;
+            cursor: pointer;
+            width: auto;
+            margin-top: 0;
+            text-transform: none;
+            letter-spacing: 0;
+            box-shadow: 0 4px 14px rgba(45,106,79,.35);
+            transition: opacity .2s, transform .15s;
+        }
+
+            .tos-btn-accept:hover {
+                opacity: .88;
+                transform: translateY(-1px);
+                box-shadow: 0 4px 14px rgba(45,106,79,.35);
+            }
+
+            .tos-btn-accept:disabled {
+                opacity: .4;
+                cursor: not-allowed;
+                transform: none;
+                box-shadow: none;
+            }
     </style>
 </head>
 <body>
+
+    
+    <div class="tos-overlay" id="tosOverlay">
+        <div class="tos-modal" id="tosModal">
+
+            <div class="tos-header">
+                <div class="tos-header-text">
+                    <span class="tos-icon">📋</span>
+                    <div>
+                        <p class="tos-title">Điều khoản sử dụng</p>
+                        <p class="tos-sub">Agriculture Analyst — Vui lòng đọc kỹ trước khi tiếp tục</p>
+                    </div>
+                </div>
+                <button class="tos-close-btn" onclick="closeTos()">✕</button>
+            </div>
+
+            <div class="tos-scroll-bar">
+                <div class="tos-scroll-fill" id="tosScrollFill"></div>
+            </div>
+            <p class="tos-scroll-hint" id="tosScrollHint">↓ Cuộn xuống để đọc toàn bộ điều khoản</p>
+
+            <div class="tos-body" id="tosBody">
+
+                <div class="tos-section">
+                    <p class="tos-section-title">🌿 1. Chấp nhận điều khoản</p>
+                    <p>
+                        Khi nhấn <strong>Đăng nhập</strong>, bạn xác nhận rằng mình đã đọc, hiểu và
+                        đồng ý toàn bộ với các điều khoản sử dụng dưới đây. Nếu bạn không đồng ý với
+                        bất kỳ điều khoản nào, vui lòng không tiếp tục sử dụng dịch vụ.
+                    </p>
+                </div>
+
+                <div class="tos-section">
+                    <p class="tos-section-title">📓 2. Minh bạch trong sử dụng nhật ký</p>
+                    <p>
+                        Hệ thống nhật ký cây trồng được cung cấp nhằm hỗ trợ việc ghi chép và theo dõi
+                        quá trình canh tác. Người dùng cam kết:
+                    </p>
+                    <ul>
+                        <li>Nhập thông tin nhật ký một cách trung thực, chính xác và có cơ sở thực tế.</li>
+                        <li>
+                            Không sử dụng hệ thống để ghi chép hoặc phát tán thông tin sai lệch, gây hiểu
+                            nhầm về tình trạng cây trồng, dịch bệnh hoặc năng suất nông nghiệp.
+                        </li>
+                        <li>Không chia sẻ dữ liệu nhật ký của người khác khi chưa được sự cho phép.</li>
+                        <li>
+                            Hiểu rằng dữ liệu nhật ký có thể được dùng để tạo báo cáo thống kê phục vụ
+                            cải thiện hệ thống, nhưng sẽ không bị chia sẻ ra bên ngoài dưới dạng
+                            định danh cá nhân.
+                        </li>
+                    </ul>
+                    <div class="tos-highlight">
+                        🌾 <strong>Nguyên tắc minh bạch:</strong> Mọi dữ liệu nhật ký bạn tạo ra đều
+                        thuộc về bạn. Chúng tôi không chỉnh sửa, xóa hay can thiệp vào nội dung
+                        nhật ký của bạn mà không có lý do chính đáng và thông báo trước.
+                    </div>
+                </div>
+
+                <div class="tos-section">
+                    <p class="tos-section-title">⚖️ 3. Trách nhiệm kiểm soát nhật ký</p>
+                    <p>
+                        Người dùng hoàn toàn chịu trách nhiệm pháp lý và đạo đức đối với toàn bộ
+                        thông tin được nhập vào hệ thống, bao gồm nhưng không giới hạn:
+                    </p>
+                    <ul>
+                        <li>Nội dung mô tả hoạt động canh tác, tình trạng cây trồng, thời tiết.</li>
+                        <li>Thông tin về loại phân bón, thuốc bảo vệ thực vật hoặc các hóa chất sử dụng.</li>
+                        <li>Dữ liệu năng suất, sản lượng và các chỉ số kinh tế liên quan.</li>
+                        <li>Hình ảnh và tệp đính kèm được tải lên hệ thống.</li>
+                    </ul>
+                    <p style="margin-top:8px">
+                        Agriculture Analyst <strong>không chịu trách nhiệm</strong> về bất kỳ tổn thất
+                        nào phát sinh từ việc người dùng nhập sai, nhập thiếu hoặc cố tình nhập thông
+                        tin không chính xác vào hệ thống nhật ký.
+                    </p>
+                </div>
+
+                <div class="tos-section">
+                    <p class="tos-section-title">🔒 4. Chính sách thu thập thông tin cá nhân</p>
+                    <p>
+                        Chúng tôi cam kết chỉ thu thập các thông tin cơ bản cần thiết để vận hành dịch vụ:
+                    </p>
+                    <ul>
+                        <li>Họ và tên đầy đủ</li>
+                        <li>Địa chỉ email liên hệ</li>
+                        <li>Số điện thoại</li>
+                        <li>Ngày tháng năm sinh (nếu cung cấp)</li>
+                        <li>Giới tính (nếu cung cấp)</li>
+                        <li>Thông tin tài khoản (tên đăng nhập, mật khẩu được mã hóa)</li>
+                    </ul>
+                    <div class="tos-highlight">
+                        🛡️ <strong>Cam kết không thu thập:</strong> Chúng tôi <strong>tuyệt đối không</strong>
+                        thu thập số CMND/CCCD, thông tin tài chính/ngân hàng, dữ liệu sinh trắc học,
+                        lịch sử duyệt web cá nhân, vị trí địa lý theo thời gian thực (ngoại trừ khi
+                        người dùng chủ động cho phép), hoặc bất kỳ thông tin nhạy cảm nào khác không
+                        liên quan đến dịch vụ.
+                    </div>
+                </div>
+
+                <div class="tos-section">
+                    <p class="tos-section-title">🔐 5. Bảo mật & Quyền riêng tư</p>
+                    <p>
+                        Toàn bộ mật khẩu được mã hóa trước khi lưu trữ. Chúng tôi không bao giờ
+                        lưu mật khẩu dưới dạng văn bản thuần. Thông tin cá nhân của bạn sẽ không
+                        được bán, cho thuê hoặc chia sẻ với bên thứ ba vì mục đích thương mại.
+                        Bạn có quyền yêu cầu xóa tài khoản và toàn bộ dữ liệu liên quan bất cứ lúc nào.
+                    </p>
+                </div>
+
+                <div class="tos-section">
+                    <p class="tos-section-title">📬 6. Liên hệ & Khiếu nại</p>
+                    <p>
+                        Nếu bạn có thắc mắc về điều khoản sử dụng hoặc cách chúng tôi xử lý dữ liệu,
+                        vui lòng liên hệ qua email hỗ trợ được cung cấp trên trang chủ. Chúng tôi cam
+                        kết phản hồi trong vòng <strong>3 ngày làm việc</strong>.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="tos-footer">
+                <div class="tos-checkbox-row">
+                    <input type="checkbox" id="tosAgree" onchange="onTosCheckChange()">
+                    <label for="tosAgree">
+                        Tôi đã đọc và đồng ý với <strong>Điều khoản sử dụng</strong> và
+                        <strong>Chính sách bảo mật</strong> của Agriculture Analyst, bao gồm
+                        trách nhiệm kiểm soát nhật ký và cam kết bảo vệ dữ liệu cá nhân.
+                    </label>
+                </div>
+                <div class="tos-btn-row">
+                    <button class="tos-btn-decline" onclick="closeTos()">Hủy bỏ</button>
+                    <button class="tos-btn-accept" id="tosAcceptBtn"
+                            onclick="acceptTosAndSubmit()" disabled>
+                        ✓ Đồng ý & Đăng nhập
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
     <div class="auth-container" id="container">
 
+        
         <div class="form-container sign-up-container">
             <a href="/" class="btn-home-link d-md-none">← Trang chủ</a>
             <form method="post" asp-action="SignUp" asp-controller="Home" id="signupForm">
                 @Html.AntiForgeryToken()
-
                 <h1 class="mt-3">Tạo tài khoản</h1>
 
                 @if (ViewData["signupError"] != null)
                 {
-                    <div class="alert alert-danger py-2 mb-3 shadow-sm rounded-3">@ViewData["signupError"]</div>
+                    <div class="alert alert-danger py-2 mb-3 shadow-sm rounded-3">
+                        @ViewData["signupError"]
+                    </div>
                 }
 
                 <div class="form-row">
@@ -385,12 +791,10 @@
                         @Html.ValidationMessage("Name", new { @class = "error-message" })
                     </div>
                 </div>
-
                 <div class="form-group">
                     <input type="email" name="Email" placeholder="Email liên hệ" required>
                     @Html.ValidationMessage("Email", new { @class = "error-message" })
                 </div>
-
                 <div class="form-row">
                     <div class="form-group">
                         <input type="tel" name="Phone" placeholder="Số điện thoại">
@@ -404,70 +808,87 @@
                         </select>
                     </div>
                 </div>
-
                 <div class="form-group">
-                    <input type="password" name="Password" placeholder="Mật khẩu (Ít nhất 6 ký tự)" required>
+                    <input type="password" name="Password"
+                           placeholder="Mật khẩu (Ít nhất 6 ký tự)" required>
                     @Html.ValidationMessage("Password", new { @class = "error-message" })
                 </div>
                 <div class="form-group">
-                    <input type="password" name="ConfirmPassword" placeholder="Xác nhận mật khẩu" required>
+                    <input type="password" name="ConfirmPassword"
+                           placeholder="Xác nhận mật khẩu" required>
                     @Html.ValidationMessage("ConfirmPassword", new { @class = "error-message" })
                 </div>
 
                 <button type="submit" id="btnSignUp">Đăng ký ngay</button>
-                <p class="form-note mb-0">Bằng cách đăng ký, bạn đồng ý với Điều khoản của chúng tôi</p>
-
-                <p class="mobile-toggle">Đã có tài khoản? <a href="#" id="mobileSignInLink">Đăng nhập</a></p>
+                <p class="form-note mb-0">
+                    Bằng cách đăng ký, bạn đồng ý với Điều khoản của chúng tôi
+                </p>
+                <p class="mobile-toggle">
+                    Đã có tài khoản?
+                    <a href="#" id="mobileSignInLink">Đăng nhập</a>
+                </p>
             </form>
         </div>
 
+        
         <div class="form-container sign-in-container">
             <a href="/" class="btn-home-link">← Trang chủ</a>
             <form method="post" asp-action="SignIn" asp-controller="Home" id="signinForm">
                 @Html.AntiForgeryToken()
-
                 <h1>Đăng nhập</h1>
-                <p class="text-center text-muted mb-4 d-none d-md-block">Chào mừng bạn quay lại với hệ thống quản lý</p>
+                <p class="text-center text-muted mb-4 d-none d-md-block">
+                    Chào mừng bạn quay lại với hệ thống quản lý
+                </p>
 
                 @if (ViewData["signinError"] != null)
                 {
-                    <div class="alert alert-danger py-2 mb-3 shadow-sm rounded-3">@ViewData["signinError"]</div>
+                    <div class="alert alert-danger py-2 mb-3 shadow-sm rounded-3">
+                        @ViewData["signinError"]
+                    </div>
                 }
                 @if (TempData["SuccessMessage"] != null)
                 {
-                    <div class="alert alert-success py-2 mb-3 shadow-sm rounded-3">@TempData["SuccessMessage"]</div>
+                    <div class="alert alert-success py-2 mb-3 shadow-sm rounded-3">
+                        @TempData["SuccessMessage"]
+                    </div>
                 }
 
                 <div class="form-group">
                     <input type="text" name="Username" placeholder="Tên đăng nhập" required>
                     @Html.ValidationMessage("Username", new { @class = "error-message" })
                 </div>
-
                 <div class="form-group mb-2">
                     <input type="password" name="Password" placeholder="Mật khẩu" required>
                     @Html.ValidationMessage("Password", new { @class = "error-message" })
                 </div>
-
                 <div class="d-flex justify-content-end w-100 mb-3">
-                    <a href="/Home/ForgotPassword" style="color: var(--primary-color); font-size: 0.9rem; font-weight: 600; text-decoration: none;">Quên mật khẩu?</a>
+                    <a href="/Home/ForgotPassword"
+                       style="color:var(--primary-color);font-size:.9rem;font-weight:600;text-decoration:none;">
+                        Quên mật khẩu?
+                    </a>
                 </div>
 
-                <button type="submit" id="btnSignIn">Đăng nhập</button>
+                
+                <button type="button" id="btnSignIn" onclick="openTos()">Đăng nhập</button>
 
-                <p class="mobile-toggle">Chưa có tài khoản? <a href="#" id="mobileSignUpLink">Tạo tài khoản</a></p>
+                <p class="mobile-toggle">
+                    Chưa có tài khoản?
+                    <a href="#" id="mobileSignUpLink">Tạo tài khoản</a>
+                </p>
             </form>
         </div>
 
+        
         <div class="overlay-container d-none d-md-block">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
                     <h1>Mừng bạn trở lại!</h1>
-                    <p>Để tiếp tục quản lý nông trại, vui lòng đăng nhập bằng tài khoản cá nhân của bạn.</p>
+                    <p>Để tiếp tục quản lý nông trại, vui lòng đăng nhập bằng tài khoản cá nhân.</p>
                     <button type="button" class="ghost" id="signIn">Đăng nhập</button>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Chào bạn mới!</h1>
-                    <p>Tham gia cùng chúng tôi để tối ưu hóa quản lý vật tư và cây trồng cho nông trại của bạn.</p>
+                    <p>Tham gia để tối ưu hóa quản lý vật tư và cây trồng cho nông trại của bạn.</p>
                     <button type="button" class="ghost" id="signUp">Tạo tài khoản</button>
                 </div>
             </div>
@@ -475,49 +896,102 @@
     </div>
 
     <script>
-        const container = document.getElementById('container');
-
-        // Nút trên PC
+        // ── Panel switching ────────────────────────────────────────
+        const container        = document.getElementById('container');
         const btnOverlaySignUp = document.getElementById('signUp');
         const btnOverlaySignIn = document.getElementById('signIn');
+        const btnMobileSignUp  = document.getElementById('mobileSignUpLink');
+        const btnMobileSignIn  = document.getElementById('mobileSignInLink');
 
-        // Nút trên Mobile
-        const btnMobileSignUp = document.getElementById('mobileSignUpLink');
-        const btnMobileSignIn = document.getElementById('mobileSignInLink');
+        function showSignUp(e) { if (e) e.preventDefault(); container.classList.add('right-panel-active'); }
+        function showSignIn(e) { if (e) e.preventDefault(); container.classList.remove('right-panel-active'); }
 
-        // Hàm kích hoạt Form Đăng ký
-        function showSignUp(e) {
-            if(e) e.preventDefault();
-            container.classList.add("right-panel-active");
-        }
+        if (btnOverlaySignUp) btnOverlaySignUp.addEventListener('click', showSignUp);
+        if (btnOverlaySignIn) btnOverlaySignIn.addEventListener('click', showSignIn);
+        if (btnMobileSignUp)  btnMobileSignUp.addEventListener('click', showSignUp);
+        if (btnMobileSignIn)  btnMobileSignIn.addEventListener('click', showSignIn);
 
-        // Hàm kích hoạt Form Đăng nhập
-        function showSignIn(e) {
-            if(e) e.preventDefault();
-            container.classList.remove("right-panel-active");
-        }
-
-        // Gán sự kiện cho PC
-        if(btnOverlaySignUp) btnOverlaySignUp.addEventListener('click', showSignUp);
-        if(btnOverlaySignIn) btnOverlaySignIn.addEventListener('click', showSignIn);
-
-        // Gán sự kiện cho Mobile
-        if(btnMobileSignUp) btnMobileSignUp.addEventListener('click', showSignUp);
-        if(btnMobileSignIn) btnMobileSignIn.addEventListener('click', showSignIn);
-
-        // Hiển thị Form phù hợp nếu có lỗi hoặc thông báo thành công từ Server
         @if (ViewData["showSignIn"] != null || TempData["SuccessMessage"] != null || ViewData["signinError"] != null)
         {
-                <text>
-                document.addEventListener('DOMContentLoaded', () => { showSignIn(); });
-                </text>
+                <text>document.addEventListener('DOMContentLoaded', () => { showSignIn(); });</text>
         }
         else if (ViewData["signupError"] != null)
         {
-                <text>
-                document.addEventListener('DOMContentLoaded', () => { showSignUp(); });
-                </text>
+                <text>document.addEventListener('DOMContentLoaded', () => { showSignUp(); });</text>
         }
+
+        // ── ToS Modal ─────────────────────────────────────────────
+        const tosOverlay    = document.getElementById('tosOverlay');
+        const tosBody       = document.getElementById('tosBody');
+        const tosScrollFill = document.getElementById('tosScrollFill');
+        const tosScrollHint = document.getElementById('tosScrollHint');
+        const tosAcceptBtn  = document.getElementById('tosAcceptBtn');
+        const tosAgree      = document.getElementById('tosAgree');
+
+        let tosRead = false; // đã cuộn đến cuối chưa
+
+        function openTos() {
+            // Validate form trước khi mở modal
+            const form = document.getElementById('signinForm');
+            const username = form.querySelector('[name="Username"]').value.trim();
+            const password = form.querySelector('[name="Password"]').value.trim();
+            if (!username || !password) {
+                form.querySelector('[name="Username"]').reportValidity();
+                return;
+            }
+            // Reset trạng thái modal
+            tosAgree.checked  = false;
+            tosAcceptBtn.disabled = true;
+            tosRead = false;
+            tosScrollFill.style.width = '0%';
+            tosScrollHint.style.opacity = '1';
+            tosBody.scrollTop = 0;
+
+            tosOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeTos() {
+            tosOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // Thanh tiến trình cuộn
+        tosBody.addEventListener('scroll', function () {
+            const scrolled  = tosBody.scrollTop;
+            const maxScroll = tosBody.scrollHeight - tosBody.clientHeight;
+            const pct = maxScroll > 0 ? Math.min(scrolled / maxScroll * 100, 100) : 100;
+            tosScrollFill.style.width = pct + '%';
+
+            if (pct >= 95) {
+                tosRead = true;
+                tosScrollHint.style.opacity = '0';
+                // Chỉ bật nút khi đã cuộn đủ VÀ đã tick checkbox
+                if (tosAgree.checked) tosAcceptBtn.disabled = false;
+            }
+        });
+
+        function onTosCheckChange() {
+            // Nút chỉ bật khi cả hai điều kiện: đã đọc đủ + đã tick
+            tosAcceptBtn.disabled = !(tosAgree.checked && tosRead);
+        }
+
+        function acceptTosAndSubmit() {
+            if (!tosAgree.checked || !tosRead) return;
+            closeTos();
+            // Submit form đăng nhập thật sự
+            document.getElementById('signinForm').submit();
+        }
+
+        // Đóng khi click ngoài modal
+        tosOverlay.addEventListener('click', function (e) {
+            if (e.target === tosOverlay) closeTos();
+        });
+
+        // Đóng bằng Escape
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeTos();
+        });
     </script>
 </body>
 </html>
