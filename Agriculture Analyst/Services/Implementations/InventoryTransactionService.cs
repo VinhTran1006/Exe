@@ -15,9 +15,9 @@ public class InventoryTransactionService : IInventoryTransactionService
         _repo.Add(trans);
     }
 
-    public IEnumerable<InventoryTransaction> GetUserTransactions(int userId)
+    public IEnumerable<InventoryTransaction> GetUserTransactions(int userId, int? type = null, int? invId = null, int? itemId = null, DateTime? fromDate = null, DateTime? toDate = null)
     {
-        return _repo.GetByUser(userId);
+        return _repo.GetByUser(userId, type, invId, itemId, fromDate, toDate);
     }
 
     public void Export(InventoryTransaction trans)

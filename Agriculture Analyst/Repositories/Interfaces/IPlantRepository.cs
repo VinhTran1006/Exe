@@ -1,4 +1,5 @@
 ﻿using Agriculture_Analyst.Models;
+using Agriculture_Analyst.Models.ViewModel;
 
 namespace Agriculture_Analyst.Repositories.Interfaces
 {
@@ -9,5 +10,7 @@ namespace Agriculture_Analyst.Repositories.Interfaces
         Task AddAsync(Plant plant);
         Task UpdateAsync(Plant plant);
         Task DeleteAsync(Plant plant);
+
+        PlantReportViewModel GetPlantReport(int plantId);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Agriculture_Analyst.Models;
+using Agriculture_Analyst.Models.ViewModel;
 using Agriculture_Analyst.Repositories.Interfaces;
 using Agriculture_Analyst.Services.Interfaces;
 using Microsoft.AspNetCore.SignalR;
@@ -57,6 +58,11 @@ namespace Agriculture_Analyst.Services.Implementations
                 throw new UnauthorizedAccessException();
 
             await _repo.DeleteAsync(plant);
+        }
+
+        public PlantReportViewModel GetPlantReport(int plantId)
+        {
+            return _repo.GetPlantReport(plantId);
         }
     }
 
