@@ -24,7 +24,7 @@ namespace Agriculture_Analyst.Models
         public int ItemId { get; set; }
 
         public int? RefTransId { get; set; }
-
+        public string? ImageUrl { get; set; }
         // --- CÁC CỘT MỚI THÊM ---
         public int? PlantId { get; set; } // Xuất cho cây nào (có thể null)
         public int Type { get; set; } = (int)TransactionType.Import; // Loại giao dịch

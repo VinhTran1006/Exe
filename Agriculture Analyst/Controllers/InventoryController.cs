@@ -1,8 +1,13 @@
 ﻿using System.Security.Claims;
 using Agriculture_Analyst.Models;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 public class InventoryController : Controller
 {
@@ -17,7 +22,7 @@ public class InventoryController : Controller
         _context = context;
     }
 
-    // Cập nhật hàm Index
+    // ================== TRANG CHỦ LỊCH SỬ GIAO DỊCH ==================
     public IActionResult Index(int? type, int? invId, int? itemId, DateTime? fromDate, DateTime? toDate)
     {
         var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -37,10 +42,14 @@ public class InventoryController : Controller
         return View(data);
     }
 
+    // ================== TẠO MỚI (NHẬP KHO) ==================
     public IActionResult Create()
     {
+        var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+        // Chỉ load kho của user hiện tại
         ViewBag.InventoryList = new SelectList(
-            _context.Inventories.ToList(),
+            _context.Inventories.Where(x => x.UserId == userId).ToList(),
             "InvId",
             "InvName"
         );
@@ -54,46 +63,68 @@ public class InventoryController : Controller
         return View();
     }
 
-
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Create(InventoryTransaction model)
+    public async Task<IActionResult> Create(InventoryTransaction trans, IFormFile? imageFile)
     {
-        ModelState.Remove("Inventory");
-        ModelState.Remove("Item");
-        ModelState.Remove("User");   // 👈 QUAN TRỌNG: Thiếu dòng này là lỗi
-        ModelState.Remove("Plant");
-        if (!ModelState.IsValid)
+        // Lấy ID người dùng đang đăng nhập
+        var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+        trans.UserId = userId;
+        trans.Type = 1; // 1 = Nhập kho
+        trans.NgayGiaoDich = DateTime.Now;
+        trans.ThanhTien = trans.SoLuong * trans.DonGia;
+
+        // ✅ ĐOẠN CODE UPLOAD ẢNH LÊN CLOUDINARY (Đã bọc kiểm tra null an toàn)
+        if (imageFile != null && imageFile.Length > 0)
         {
-            ViewBag.Items = _context.Items
-    .Select(i => new SelectListItem
-    {
-        Value = i.ItemId.ToString(),
-        Text = i.ItemName
-    })
-    .ToList();
+            try
+            {
+                Account account = new Account(
+                    "dyop5mqdp",           // Cloud Name
+                    "818898689433435",     // API Key
+                    "FUXXYjFM6mhjT3tGexPuoOSoEKc" // Secret key
+                );
+                Cloudinary cloudinary = new Cloudinary(account);
 
-            ViewBag.Inventories = _context.Inventories
-                .Select(i => new SelectListItem
+                using (var stream = imageFile.OpenReadStream())
                 {
-                    Value = i.InvId.ToString(),
-                    Text = i.InvName
-                })
-                .ToList();
+                    var uploadParams = new ImageUploadParams()
+                    {
+                        File = new FileDescription(imageFile.FileName, stream),
+                        Folder = "Inventory_Imports"
+                    };
 
-            return View(model);
+                    var uploadResult = await cloudinary.UploadAsync(uploadParams);
+
+                    // Kiểm tra xem Cloudinary có trả về lỗi không, nếu không mới gán URL
+                    if (uploadResult.Error != null)
+                    {
+                        Console.WriteLine("❌ LỖI UPLOAD ẢNH CLOUDINARY: " + uploadResult.Error.Message);
+                    }
+                    else if (uploadResult.SecureUrl != null)
+                    {
+                        // Lưu link ảnh HTTPS vào Database an toàn
+                        trans.ImageUrl = uploadResult.SecureUrl.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Bắt lỗi nếu cấu hình sai account
+                Console.WriteLine("❌ LỖI HỆ THỐNG CLOUDINARY: " + ex.Message);
+            }
         }
 
-        model.UserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-        model.NgayGiaoDich = DateTime.Now;
-
-        _service.Create(model);
+        // Lưu giao dịch vào Database
+        _context.InventoryTransactions.Add(trans);
+        await _context.SaveChangesAsync();
 
         return RedirectToAction(nameof(Index));
     }
-    // File: Controllers/InventoryController.cs
 
-    public IActionResult Export(int? filterInvId) // Thêm tham số filterInvId
+
+    // ================== XUẤT KHO (GET) ==================
+    public IActionResult Export(int? filterInvId)
     {
         var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
@@ -108,15 +139,25 @@ public class InventoryController : Controller
             query = query.Where(t => t.InvId == filterInvId.Value);
         }
 
-        var importBatches = query
-            .OrderByDescending(t => t.NgayGiaoDich)
-            .Select(t => new
+        // Kéo dữ liệu về bộ nhớ
+        var rawBatches = query.OrderByDescending(t => t.NgayGiaoDich).ToList();
+
+        // Khởi tạo Repo để tính số tồn
+        var repo = new InventoryTransactionRepository(_context);
+
+        // ✅ CHỈ LẤY NHỮNG LÔ HÀNG CÒN TỒN KHO (> 0) VÀ HIỂN THỊ SỐ TỒN
+        var importBatches = rawBatches
+            .Select(t => new {
+                Batch = t,
+                Remaining = repo.GetBatchRemainingQuantity(t.TransId)
+            })
+            .Where(x => x.Remaining > 0) // Bộ lọc cốt lõi: Chỉ lấy lô còn hàng
+            .Select(x => new
             {
-                TransId = t.TransId,
-                // Hiển thị tên ngắn gọn hơn nếu đã lọc kho
+                TransId = x.Batch.TransId,
                 DisplayText = filterInvId.HasValue
-                    ? $"{t.Item.ItemName} - Nhập: {t.NgayGiaoDich:dd/MM/yyyy} - Giá: {t.DonGia:N0}"
-                    : $"{t.Item.ItemName} ({t.Inventory.InvName}) - Nhập: {t.NgayGiaoDich:dd/MM/yyyy}"
+                    ? $"{x.Batch.Item.ItemName} - Nhập: {x.Batch.NgayGiaoDich:dd/MM/yyyy} - Tồn: {x.Remaining} - Giá: {x.Batch.DonGia:N0}"
+                    : $"{x.Batch.Item.ItemName} ({x.Batch.Inventory.InvName}) - Nhập: {x.Batch.NgayGiaoDich:dd/MM/yyyy} - Tồn: {x.Remaining}"
             })
             .ToList();
 
@@ -127,35 +168,13 @@ public class InventoryController : Controller
             _context.Inventories.Where(x => x.UserId == userId).ToList(),
             "InvId", "InvName", filterInvId);
 
+        // 3. Danh sách cây trồng (Chỉ lấy cây đang trồng)
         ViewBag.PlantList = new SelectList(_context.Plants.Where(u => u.UserId == userId && u.Status == "Đang trồng"), "PlantId", "PlantName");
 
         return View();
     }
 
-    [HttpGet]
-    public IActionResult GetBatchDetails(int transId)
-    {
-        // ✅ SỬA LỖI: Khởi tạo Repository thủ công từ _context
-        var repo = new InventoryTransactionRepository(_context);
-
-        // Gọi hàm từ biến 'repo' vừa tạo (chứ không phải _repo)
-        var remaining = repo.GetBatchRemainingQuantity(transId);
-
-        var trans = _context.InventoryTransactions
-            .Where(t => t.TransId == transId)
-            .Select(t => new {
-                t.ItemId,
-                t.InvId,
-                t.DonGia,
-                t.LaiSuat,
-                NgayNhap = t.NgayGiaoDich,
-                RemainingQty = remaining // Trả về số lượng tồn tính được
-            })
-            .FirstOrDefault();
-
-        return Json(trans);
-    }
-
+    // ================== XUẤT KHO (POST) ==================
     [HttpPost]
     [ValidateAntiForgeryToken]
     public IActionResult Export(InventoryTransaction model)
@@ -167,7 +186,7 @@ public class InventoryController : Controller
         ModelState.Remove("Plant");
         ModelState.Remove("User");
 
-        // 3. CHECK LOGIC: Kiểm tra người dùng có chọn Lô hàng không?
+        // CHECK LOGIC: Kiểm tra người dùng có chọn Lô hàng không?
         if (model.RefTransId == null || model.RefTransId == 0)
         {
             ModelState.AddModelError("RefTransId", "Vui lòng chọn lô hàng cần xuất!");
@@ -183,18 +202,28 @@ public class InventoryController : Controller
             }
         }
 
-        // 5. Nếu có lỗi (chưa chọn lô hoặc xuất quá số lượng) -> Trả về View báo lỗi
+        // Nếu có lỗi (chưa chọn lô hoặc xuất quá số lượng) -> Trả về View báo lỗi
         if (!ModelState.IsValid)
         {
-            var importBatches = _context.InventoryTransactions
+            var repo = new InventoryTransactionRepository(_context);
+            var rawBatches = _context.InventoryTransactions
                 .Include(t => t.Item)
                 .Include(t => t.Inventory)
                 .Where(t => t.UserId == userId && t.Type == 1)
                 .OrderByDescending(t => t.NgayGiaoDich)
-                .Select(t => new
+                .ToList();
+
+            // ✅ LỌC LẠI LÔ CÒN TỒN NẾU FORM BỊ LỖI PHẢI LOAD LẠI
+            var importBatches = rawBatches
+                .Select(t => new {
+                    Batch = t,
+                    Remaining = repo.GetBatchRemainingQuantity(t.TransId)
+                })
+                .Where(x => x.Remaining > 0)
+                .Select(x => new
                 {
-                    TransId = t.TransId,
-                    DisplayText = $"{t.Item.ItemName} (Kho: {t.Inventory.InvName}) - Nhập: {t.NgayGiaoDich:dd/MM/yyyy} - Giá: {t.DonGia:N0}"
+                    TransId = x.Batch.TransId,
+                    DisplayText = $"{x.Batch.Item.ItemName} (Kho: {x.Batch.Inventory.InvName}) - Nhập: {x.Batch.NgayGiaoDich:dd/MM/yyyy} - Tồn: {x.Remaining} - Giá: {x.Batch.DonGia:N0}"
                 })
                 .ToList();
 
@@ -204,14 +233,20 @@ public class InventoryController : Controller
             return View(model);
         }
 
-        // 6. Nếu mọi thứ OK -> Gán dữ liệu và Lưu
+        // Nếu mọi thứ OK -> Gán dữ liệu và Lưu
         try
         {
             model.UserId = userId;
             model.NgayGiaoDich = DateTime.Now;
             model.Type = 2; // Đánh dấu là Xuất kho (Export)
+            model.ThanhTien = model.SoLuong * model.DonGia;
 
-            // RefTransId đã tự động bind từ Dropdown, nên hệ thống sẽ biết xuất từ lô nào
+            // ✅ TỰ ĐỘNG LẤY ẢNH TỪ LÔ HÀNG GỐC GẮN VÀO LỆNH XUẤT
+            var loHangGoc = _context.InventoryTransactions.FirstOrDefault(t => t.TransId == model.RefTransId);
+            if (loHangGoc != null)
+            {
+                model.ImageUrl = loHangGoc.ImageUrl;
+            }
 
             _service.Create(model);
 
@@ -224,19 +259,40 @@ public class InventoryController : Controller
         }
     }
 
-    public IActionResult StockReport(int? invId) // Thêm tham số invId
+
+    // ================== API LẤY THÔNG TIN LÔ HÀNG QUA AJAX ==================
+    [HttpGet]
+    public IActionResult GetBatchDetails(int transId)
+    {
+        var repo = new InventoryTransactionRepository(_context);
+        var remaining = repo.GetBatchRemainingQuantity(transId);
+
+        var trans = _context.InventoryTransactions
+            .Where(t => t.TransId == transId)
+            .Select(t => new {
+                t.ItemId,
+                t.InvId,
+                t.DonGia,
+                t.LaiSuat,
+                NgayNhap = t.NgayGiaoDich,
+                RemainingQty = remaining
+            })
+            .FirstOrDefault();
+
+        return Json(trans);
+    }
+
+
+    // ================== BÁO CÁO TỒN KHO ==================
+    public IActionResult StockReport(int? invId)
     {
         var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-        // 1. Load danh sách kho để hiển thị Dropdown
         ViewBag.InventoryList = new SelectList(
             _context.Inventories.Where(x => x.UserId == userId).ToList(),
             "InvId", "InvName", invId);
 
-        // 2. Gọi Service với tham số invId (nếu null thì nó lấy tất cả)
         var reportData = _service.GetCurrentStock(userId, invId);
-
-        // Lưu lại kho đang chọn để hiển thị tiêu đề
         ViewBag.SelectedInvId = invId;
 
         return View(reportData);

@@ -4,6 +4,7 @@ using Agriculture_Analyst.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Agriculture_Analyst.Migrations
 {
     [DbContext(typeof(AgricultureAnalystDbContext))]
-    partial class AgricultureAnalystDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260320032106_AddImageToInventory")]
+    partial class AddImageToInventory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

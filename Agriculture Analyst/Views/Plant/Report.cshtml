@@ -52,11 +52,29 @@
         -webkit-print-color-adjust: exact;
         color: #495057;
         font-weight: 600;
+        vertical-align: middle;
+    }
+
+    .table-print td {
+        vertical-align: middle;
     }
 
     .signature-box {
         margin-top: 4rem;
         page-break-inside: avoid;
+    }
+
+    /* --- HIỆU CHỈNH RESPONSIVE CHO ĐIỆN THOẠI --- */
+    @@media (max-width: 768px) {
+        .document-page {
+            padding: 1.5rem !important; /* Cắt giảm lề để vừa đt */
+            margin: 1rem auto;
+        }
+        /* Ép chữ ký và thông tin xếp chồng trên mobile */
+        .info-box .col-md-6, .signature-box .col-md-6 {
+            width: 100% !important;
+            margin-bottom: 1rem;
+        }
     }
 
     /* --- HIỆU ỨNG KHI BẤM IN / XUẤT PDF --- */
@@ -66,11 +84,11 @@
             margin: 0;
             padding: 0;
         }
-        /* Ẩn các thành phần không cần thiết */
+
         header, footer, .navbar, .sidebar, .no-print {
             display: none !important;
         }
-        /* Xóa bóng đổ và căn lề lại cho vừa giấy A4 */
+
         .document-page {
             box-shadow: none;
             margin: 0 auto;
@@ -78,7 +96,11 @@
             width: 100%;
             max-width: 100%;
         }
-        /* Ép trình duyệt in đúng màu nền của bảng (nếu hỗ trợ) */
+        /* Hủy responsive table khi in để giữ nguyên bảng */
+        .table-responsive {
+            overflow: visible !important;
+        }
+
         * {
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
@@ -93,7 +115,7 @@
             <i class="bi bi-arrow-left"></i> Quay lại
         </a>
         <button onclick="window.print()" class="btn btn-primary fw-bold shadow-sm" style="background-color: #27ae60; border: none;">
-            🖨️ In Báo Cáo / Xuất PDF
+            🖨️ In Báo Cáo / PDF
         </button>
     </div>
 
@@ -109,12 +131,12 @@
 
         <div class="section-title">1. Thông tin chung</div>
         <div class="info-box row mb-4">
-            <div class="col-6">
+            <div class="col-md-6 col-12">
                 <p class="mb-2"><strong>Mã vụ mùa:</strong> #@Model.Plant.PlantId</p>
                 <p class="mb-2"><strong>Cây trồng:</strong> @Model.Plant.PlantName</p>
-                <p class="mb-0"><strong>Giống/Loại:</strong> @(string.IsNullOrEmpty(Model.Plant.PlantType) ? "Không xác định" : Model.Plant.PlantType)</p>
+                <p class="mb-md-0 mb-2"><strong>Giống/Loại:</strong> @(string.IsNullOrEmpty(Model.Plant.PlantType) ? "Không xác định" : Model.Plant.PlantType)</p>
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-12">
                 <p class="mb-2"><strong>Trạng thái:</strong> <span class="badge bg-success">@Model.Plant.Status</span></p>
                 <p class="mb-2"><strong>Diện tích:</strong> @Model.Plant.Area m²</p>
                 <p class="mb-0"><strong>Ngày xuống giống:</strong> @(Model.Plant.StartDate?.ToString("dd/MM/yyyy") ?? "-")</p>
@@ -122,92 +144,117 @@
         </div>
 
         <div class="section-title">2. Chi phí vật tư nông nghiệp (Đã xuất kho)</div>
-        <table class="table table-bordered table-print mb-4">
-            <thead>
-                <tr>
-                    <th class="text-center" width="5%">STT</th>
-                    <th width="15%">Ngày xuất</th>
-                    <th width="30%">Vật tư sử dụng</th>
-                    <th class="text-center" width="15%">Số lượng</th>
-                    <th class="text-end" width="15%">Đơn giá (đ)</th>
-                    <th class="text-end" width="20%">Thành tiền (đ)</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (!Model.UsedMaterials.Any())
-                {
+
+        <div class="table-responsive mb-4">
+            <table class="table table-bordered table-print" style="min-width: 600px;">
+                <thead>
                     <tr>
-                        <td colspan="6" class="text-center text-muted fst-italic py-3">
-                            Chưa ghi nhận xuất vật tư cho vụ mùa này.
-                        </td>
+                        <th class="text-center" width="5%">STT</th>
+                        <th width="15%">Ngày xuất</th>
+                        <th width="35%">Chi tiết Vật tư</th>
+                        <th class="text-center" width="10%">SL</th>
+                        <th class="text-end" width="15%">Đơn giá (đ)</th>
+                        <th class="text-end" width="20%">Thành tiền (đ)</th>
                     </tr>
-                }
-                else
-                {
-                    int stt = 1;
-                    foreach (var item in Model.UsedMaterials)
+                </thead>
+                <tbody>
+                    @if (!Model.UsedMaterials.Any())
                     {
                         <tr>
-                            <td class="text-center">@(stt++)</td>
-                            <td>@(item.NgayGiaoDich?.ToString("dd/MM/yyyy"))</td>
-                            <td class="fw-bold text-dark">
-                                @item.Item.ItemName <span class="fw-normal text-muted">(@item.Item.Unit)</span>
+                            <td colspan="6" class="text-center text-muted fst-italic py-3">
+                                Chưa ghi nhận xuất vật tư cho vụ mùa này.
                             </td>
-                            <td class="text-center fw-bold">@item.SoLuong</td>
-                            <td class="text-end text-muted">@item.DonGia.ToString("N0")</td>
-                            <td class="text-end fw-bold">@item.ThanhTien.ToString("N0")</td>
                         </tr>
                     }
-                    <tr>
-                        <td colspan="5" class="text-end fw-bold text-uppercase" style="background-color: #f8f9fa;">
-                            Tổng chi phí vật tư:
-                        </td>
-                        <td class="text-end fw-bold text-danger fs-5" style="background-color: #f8f9fa;">
-                            @Model.TotalMaterialCost.ToString("N0")
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+                    else
+                    {
+                        int stt = 1;
+                        foreach (var item in Model.UsedMaterials)
+                        {
+                            <tr>
+                                <td class="text-center">@(stt++)</td>
+                                <td>@(item.NgayGiaoDich?.ToString("dd/MM/yyyy"))</td>
+
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                        {
+                                            <a href="@item.ImageUrl" target="_blank" class="no-print">
+                                                <img src="@item.ImageUrl" style="width: 40px; height: 40px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd;" />
+                                            </a>
+                                            <img src="@item.ImageUrl" style="width: 40px; height: 40px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd; display: none;" class="print-only" />
+                                        }
+                                        else
+                                        {
+                                            <div style="width: 40px; height: 40px; background: #f8f9fa; border-radius: 4px; border: 1px dashed #ccc; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                                                📦
+                                            </div>
+                                        }
+                                        <div>
+                                            <div class="fw-bold text-dark" style="font-size: 0.95rem;">@item.Item.ItemName</div>
+                                            <div class="text-muted" style="font-size: 0.8rem;">ĐVT: @item.Item.Unit</div>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="text-center fw-bold">@item.SoLuong</td>
+                                <td class="text-end text-muted">@item.DonGia.ToString("N0")</td>
+                                <td class="text-end fw-bold">@item.ThanhTien.ToString("N0")</td>
+                            </tr>
+                        }
+                        <tr>
+                            <td colspan="5" class="text-end fw-bold text-uppercase" style="background-color: #f8f9fa;">
+                                Tổng chi phí vật tư:
+                            </td>
+                            <td class="text-end fw-bold text-danger fs-5" style="background-color: #f8f9fa;">
+                                @Model.TotalMaterialCost.ToString("N0")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
 
         <div class="section-title">3. Tóm tắt nhật ký chăm sóc</div>
-        <table class="table table-sm table-striped table-print">
-            <thead>
-                <tr>
-                    <th width="15%">Ngày</th>
-                    <th width="25%">Hoạt động</th>
-                    <th width="60%">Ghi chú / Chi tiết</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (!Model.DiaryEntries.Any())
-                {
+        <div class="table-responsive">
+            <table class="table table-sm table-striped table-print" style="min-width: 500px;">
+                <thead>
                     <tr>
-                        <td colspan="3" class="text-center text-muted fst-italic py-3">
-                            Chưa có nhật ký hoạt động nào.
-                        </td>
+                        <th width="15%">Ngày</th>
+                        <th width="25%">Hoạt động</th>
+                        <th width="60%">Ghi chú / Chi tiết</th>
                     </tr>
-                }
-                else
-                {
-                    foreach (var d in Model.DiaryEntries)
+                </thead>
+                <tbody>
+                    @if (!Model.DiaryEntries.Any())
                     {
                         <tr>
-                            <td>@(d.EntryDate?.ToString("dd/MM/yyyy"))</td>
-                            <td class="fw-bold">@d.Activity</td>
-                            <td>@d.Description</td>
+                            <td colspan="3" class="text-center text-muted fst-italic py-3">
+                                Chưa có nhật ký hoạt động nào.
+                            </td>
                         </tr>
                     }
-                }
-            </tbody>
-        </table>
+                    else
+                    {
+                        foreach (var d in Model.DiaryEntries)
+                        {
+                            <tr>
+                                <td>@(d.EntryDate?.ToString("dd/MM/yyyy"))</td>
+                                <td class="fw-bold">@d.Activity</td>
+                                <td>@d.Description</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
 
         <div class="row signature-box text-center">
-            <div class="col-6">
+            <div class="col-md-6 col-12">
                 <p class="fw-bold mb-5">Người lập báo cáo</p>
                 <p class="mt-5 text-muted fst-italic">(Ký và ghi rõ họ tên)</p>
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-12">
                 <p class="fw-bold mb-5">Quản lý nông trại</p>
                 <p class="mt-5 text-muted fst-italic">(Ký và ghi rõ họ tên)</p>
             </div>
@@ -215,3 +262,12 @@
 
     </div>
 </div>
+
+<style>
+    /* CSS Phụ trợ để quản lý hiển thị ảnh khi in */
+    @@media print {
+        .print-only {
+            display: block !important;
+        }
+    }
+</style>
